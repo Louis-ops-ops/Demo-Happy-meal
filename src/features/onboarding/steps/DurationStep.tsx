@@ -30,7 +30,7 @@ export function DurationStep() {
       await saveOnboarding(profile, weightKg)
       // The draft is cleared when a new onboarding starts (splash), not here: clearing it now would
       // re-render this step before the route changes and its guard would send back to the metrics.
-      navigate(appPath('plan'), { replace: true })
+      navigate(appPath('plan/nouveau'), { replace: true })
     } catch {
       setError('Impossible d’enregistrer ton profil. Vérifie tes réponses et réessaie.')
       setSaving(false)

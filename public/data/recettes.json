@@ -2937,6 +2937,158 @@
         "poele",
         "casserole"
       ]
+    },
+    {
+      "id": "oeufs-brouilles-avocat",
+      "title": "Œufs brouillés à l'avocat",
+      "minutes": 10,
+      "servings": 1,
+      "slots": [
+        "breakfast"
+      ],
+      "protein": "oeuf",
+      "clay": "oeuf",
+      "ingredients": [
+        {
+          "foodId": "22000",
+          "grams": 100,
+          "label": "œufs",
+          "display": "2 œufs"
+        },
+        {
+          "foodId": "13004",
+          "grams": 70,
+          "label": "avocat",
+          "display": "1/2 avocat"
+        },
+        {
+          "foodId": "17270",
+          "grams": 5,
+          "label": "huile d'olive",
+          "display": "1 c. à café"
+        },
+        {
+          "foodId": "13009",
+          "grams": 5,
+          "label": "jus de citron"
+        },
+        {
+          "foodId": "11015",
+          "grams": 0.5,
+          "label": "poivre",
+          "display": "1 pincée"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Casse les œufs dans un bol et bats-les à la fourchette avec une pincée de poivre."
+        },
+        {
+          "text": "Fais chauffer l'huile à feu doux et verse les œufs. Remue doucement jusqu'à ce qu'ils soient crémeux.",
+          "timerMinutes": 3
+        },
+        {
+          "text": "Dispose l'avocat en tranches à côté, arrose-le de jus de citron et sers aussitôt."
+        }
+      ],
+      "equipment": [
+        "poele"
+      ]
+    },
+    {
+      "id": "bol-yaourt-banane-amandes",
+      "title": "Bol de yaourt, banane et amandes",
+      "minutes": 5,
+      "servings": 1,
+      "slots": [
+        "breakfast"
+      ],
+      "protein": "laitier",
+      "ingredients": [
+        {
+          "foodId": "19860",
+          "grams": 150,
+          "label": "yaourt à la grecque nature",
+          "display": "1 pot"
+        },
+        {
+          "foodId": "13005",
+          "grams": 100,
+          "label": "banane",
+          "display": "1 banane"
+        },
+        {
+          "foodId": "15000",
+          "grams": 15,
+          "label": "amandes",
+          "display": "1 poignée"
+        },
+        {
+          "foodId": "31008",
+          "grams": 10,
+          "label": "miel",
+          "display": "1 c. à café"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Verse le yaourt dans un bol et coupe la banane en rondelles par-dessus."
+        },
+        {
+          "text": "Concasse grossièrement les amandes et ajoute-les avec un filet de miel."
+        }
+      ],
+      "equipment": []
+    },
+    {
+      "id": "bol-fraises-banane-noix",
+      "title": "Bol fraises, banane et noix",
+      "minutes": 5,
+      "servings": 1,
+      "slots": [
+        "breakfast"
+      ],
+      "protein": "laitier",
+      "ingredients": [
+        {
+          "foodId": "19646",
+          "grams": 150,
+          "label": "fromage blanc 3 %",
+          "display": "3/4 de pot"
+        },
+        {
+          "foodId": "13014",
+          "grams": 100,
+          "label": "fraises"
+        },
+        {
+          "foodId": "13005",
+          "grams": 100,
+          "label": "banane",
+          "display": "1 banane"
+        },
+        {
+          "foodId": "15005",
+          "grams": 15,
+          "label": "cerneaux de noix",
+          "display": "4 noix"
+        },
+        {
+          "foodId": "31034",
+          "grams": 10,
+          "label": "sirop d'érable",
+          "display": "2 c. à café"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Lave les fraises, retire les queues et coupe-les en quartiers. Coupe la banane en rondelles."
+        },
+        {
+          "text": "Verse le fromage blanc dans un bol, ajoute les fruits, les noix concassées et le sirop d'érable."
+        }
+      ],
+      "equipment": []
     }
   ]
 }

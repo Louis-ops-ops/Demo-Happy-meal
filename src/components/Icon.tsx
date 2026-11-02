@@ -30,6 +30,7 @@ export type IconName =
   | 'heart-filled'
   | 'minus'
   | 'plus'
+  | 'refresh-cw'
   | 'refrigerator'
   | 'scan'
   | 'search'

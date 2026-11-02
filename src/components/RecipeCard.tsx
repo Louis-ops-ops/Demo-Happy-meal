@@ -39,7 +39,7 @@ export function RecipeCard({
       )}
     >
       <div className="flex size-16 shrink-0 items-center justify-center rounded-02 bg-lightbrown-p">
-        {clay && <ClayIcon id={clay} size={48} />}
+        {clay ? <ClayIcon id={clay} size={48} /> : <Icon name="cooking-pot" size={24} className="text-text-muted" />}
       </div>
       <div className="flex min-w-0 flex-1 flex-col gap-01">
         <h3 className="text-title-3 text-text">
@@ -56,8 +56,8 @@ export function RecipeCard({
             title
           )}
         </h3>
-        <p className="flex items-center gap-01 text-body-sm text-text-muted">
-          <Icon name="clock" size={16} />
+        <p className="flex items-start gap-01 text-body-sm text-text-muted">
+          <Icon name="clock" size={16} className="mt-[1px]" />
           {meta}
         </p>
       </div>
