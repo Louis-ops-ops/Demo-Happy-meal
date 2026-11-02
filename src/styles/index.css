@@ -25,12 +25,25 @@
   --color-lightbrown-p: var(--lightbrown-p);
   --color-creme-p: var(--creme-p);
   --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
   --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
   --color-primary: var(--color-primary);
   --color-on-primary: var(--color-on-primary);
   --color-accent: var(--color-accent);
-  --color-highlight: var(--color-highlight);
   --color-focus: var(--color-focus);
+  --color-focus-text: var(--color-focus-text);
+  --color-disabled: var(--color-disabled);
+
+  --shadow-*: initial;
+  --shadow-raised: var(--neu-raised);
+  --shadow-raised-sm: var(--neu-raised-sm);
+  --shadow-flat: var(--neu-flat);
+  --shadow-primary: var(--neu-primary);
+  --shadow-pressed: var(--neu-pressed);
+  --shadow-primary-pressed: var(--neu-primary-pressed);
+  --inset-shadow-*: initial;
+  --ease-out: var(--ease-out);
 
   --spacing-01: var(--spacing-01);
   --spacing-02: var(--spacing-02);
@@ -116,7 +129,7 @@
 
   :focus-visible {
     outline: 2px solid var(--color-focus);
-    outline-offset: 2px;
+    outline-offset: 3px;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -129,6 +142,17 @@
       scroll-behavior: auto !important;
     }
   }
+}
+
+/* Inline icon tinted with currentColor: the SVG file is used as a mask, untouched. */
+@utility icon-mask {
+  display: inline-block;
+  flex-shrink: 0;
+  background-color: currentColor;
+  mask-image: var(--icon);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
 }
 
 @utility text-overline-caps {

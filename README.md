@@ -21,6 +21,11 @@ npm test
 Vite, React 18, TypeScript strict, Tailwind CSS 4 branché sur `src/styles/tokens.css`, React Router, vite-plugin-pwa, Vitest.
 Les écarts entre la cible web et la cible desktop (Electron) passent tous par `src/platform.ts`.
 
+## UI Kit
+
+Tous les composants sont visibles sur `/app/_kit` (tab bar sous 1024 px, sidebar au-dessus). Captures : `docs/captures/`.
+
 ## Licence
 
 Code sous licence MIT (voir `LICENSE`).
+Icônes d'interface : tracés [Lucide](https://lucide.dev) (licence ISC). Illustrations clay : créations du projet.

@@ -30,14 +30,34 @@
   --orange-400: #dfae92;
   --orange-500: #d18666;
 
-  /* Semantic roles */
-  --color-bg: var(--creme-p);
+  /* Semantic roles (Figma variables color/*). Screens use darkgreen-100 as background. */
+  --color-bg: var(--darkgreen-100);
+  /* Neumorphism needs surfaces of the same color as the background they sit on. */
+  --color-surface: var(--color-bg);
   --color-text: var(--darkgreen-p);
+  --color-text-muted: #55644f;
   --color-primary: var(--darkgreen-p);
   --color-on-primary: var(--creme-p);
-  --color-accent: var(--lightgreen-p);
-  --color-highlight: var(--orange-p);
-  --color-focus: var(--orange-p);
+  --color-accent: var(--orange-p);
+  --color-focus: var(--lightgreen-p);
+  /* lightgreen-p is 4.17:1 on the background: too low for small text, so selected labels use this. */
+  --color-focus-text: #4f6142;
+  --color-disabled: var(--darkgreen-400);
+
+  /* Neumorphism (Figma effect styles neu/*) */
+  --shadow-light: #ffffff;
+  --shadow-dark: rgb(46 58 47 / 0.14);
+  --shadow-dark-strong: rgb(46 58 47 / 0.26);
+  --shadow-primary-inset: rgb(0 0 0 / 0.35);
+
+  --neu-raised: 8px 8px 20px var(--shadow-dark), -8px -8px 20px var(--shadow-light),
+    inset 0 0 0 1px var(--shadow-light);
+  --neu-raised-sm: 4px 4px 10px var(--shadow-dark), -4px -4px 10px var(--shadow-light),
+    inset 0 0 0 1px var(--shadow-light);
+  --neu-flat: 2px 2px 6px var(--shadow-dark), -2px -2px 6px var(--shadow-light);
+  --neu-pressed: inset 4px 4px 10px var(--shadow-dark), inset -4px -4px 10px var(--shadow-light);
+  --neu-primary: 8px 8px 20px var(--shadow-dark-strong), -8px -8px 20px var(--shadow-light);
+  --neu-primary-pressed: inset 4px 4px 10px var(--shadow-primary-inset);
 
   /* Spacing */
   --spacing-01: 4px;
@@ -103,10 +123,15 @@
 
   --overline-size: 12px;
   --overline-lh: 16px;
-  --overline-weight: 400;
+  --overline-weight: 600; /* Figma style Texte/overline is SemiBold */
   --overline-ls: 0.48px;
 
   /* Layout */
   --container-max: 1280px;
   --touch-target: 44px;
+  --sidebar-width: 264px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 180ms;
 }

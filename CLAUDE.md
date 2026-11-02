@@ -135,6 +135,14 @@ Tab bar v2 : Aujourd'hui · Plan · Courses · Suivi · Profil (le Figma montre 
 | overline | 12 | 16 | 400 | 0.48 (+ majuscules) |
 
 Convention : fond = `creme-p`, texte = `darkgreen-p`, action principale = `orange-p`, accents = `lightgreen-p`.
+
+**Ce que dit Figma (vérifié le 02/11/2026, prime sur la ligne ci-dessus)** — variables `color/*` et styles d'effet `neu/*`, codés dans `src/styles/tokens.css` :
+- fond des écrans et surfaces = `darkgreen-100` `#F9FAFA` (`color-surface`) ; `creme-p` reste dispo (texte sur fond foncé : `color-on-primary`).
+- action principale = `darkgreen-p` (bouton Primary, NavBar) ; `color-accent` = `orange-p` (favori, étincelle) ; `color-focus` = `lightgreen-p` (sélection, switch, progression, anneau de focus).
+- `color-text-muted` = `#55644F` (6,05:1). `lightgreen-p` en texte = 4,17:1 → les libellés sélectionnés utilisent `color-focus-text` `#4F6142` (6,43:1).
+- ombres : `shadow-dark` `#2E3A2F24`, `shadow-dark-strong` `#2E3A2F42`, `shadow-light` blanc ; `neu/raised` 8/20, `neu/raised-sm` 4/10, `neu/flat` 2/6, `neu/pressed` inset 4/10, `neu/primary`, `neu/primary-pressed`.
+- `overline` est en 600 (SemiBold) dans Figma, pas 400.
+- icônes d'interface = jeu Figma `Icon/*` (tracés Lucide) dans `src/assets/icons/` + `sun`, `shopping-basket`, `chart-spline` (Lucide, ISC) pour les onglets v2.
 ⚠️ **Accessibilité** : blanc sur `orange-p` ≈ 3.6:1 (échoue AA en texte normal). Réserver aux textes ≥ 18 px / 14 px gras, sinon utiliser `darkgreen-p` sur orange clair. Vérifier les contrastes des nouveaux couples.
 
 Composants du UI Kit existants : bouton « Générer une recette », champ de recherche « Rechercher un aliment », puces d'aliments, carte recette (« Curry de lentilles corail · 25 min · 420 kcal »), écran d'accueil « Que cuisiner ce soir ? ». Le reste (jauge kcal, courbe, onglets…) est à construire dans le même style, en vérifiant Figma d'abord.
