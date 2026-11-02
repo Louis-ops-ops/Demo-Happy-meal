@@ -5,7 +5,7 @@ import { buildReferenceData } from '../../data/reference'
 import type { FoodsFile, RecipesFile } from '../../data/schemas'
 import { dayKcal, generatePlan, NO_REPEAT_DAYS, swapCandidates, applySwap } from '../../domain/plan'
 import { availableSuggestions, ingredientLabels, toPlanRecipes } from './planRecipes'
-import { formatPortions, formatRange } from './labels'
+import { formatRange } from './labels'
 
 const read = <T>(file: string) => JSON.parse(readFileSync(join(process.cwd(), 'public', 'data', file), 'utf8')) as T
 const data = buildReferenceData(read<FoodsFile>('aliments.json'), read<RecipesFile>('recettes.json'))
@@ -89,11 +89,8 @@ describe('"Ce que j’ai déjà"', () => {
 })
 
 describe('labels', () => {
-  it('formats a date range and portions in French', () => {
+  it('formats a date range in French', () => {
     expect(formatRange('2026-11-03', 7)).toBe('du 3 au 9 novembre')
     expect(formatRange('2026-10-28', 7)).toBe('du 28 octobre au 3 novembre')
-    expect(formatPortions(1.25)).toBe('1,25 portion')
-    expect(formatPortions(1)).toBe('1 portion')
-    expect(formatPortions(2)).toBe('2 portions')
   })
 })

@@ -3,7 +3,6 @@ import type { IndexedRecipe } from '../../data/reference'
 import type { PlanMealRow } from '../../data/db'
 import { normalize } from '../../domain/text'
 import { formatInt } from '../format'
-import { formatPortions } from './labels'
 
 const isClayId = (id: string | undefined): id is ClayId => clayIds.includes(id as ClayId)
 
@@ -13,9 +12,9 @@ export const recipeClay = (recipe: IndexedRecipe): ClayId | undefined =>
 
 export const mealKcal = (recipe: IndexedRecipe, portions: number) => recipe.nutrition.kcal * portions
 
-/** "25 min · 520 kcal · 1,25 portion" */
+/** "25 min · 520 kcal": the dish as planned for the person (quantities are already scaled, no "portion" shown). */
 export const mealMeta = (recipe: IndexedRecipe, portions: number) =>
-  `${recipe.minutes} min · ${formatInt(mealKcal(recipe, portions))} kcal · ${formatPortions(portions)}`
+  `${recipe.minutes} min · ${formatInt(mealKcal(recipe, portions))} kcal`
 
 export const mealsOfDay = (meals: readonly PlanMealRow[], day: number) => meals.filter((m) => m.day === day)
 

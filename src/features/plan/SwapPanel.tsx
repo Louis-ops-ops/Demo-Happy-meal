@@ -58,7 +58,7 @@ export function SwapPanel({ state, day, index, onPick, onClose }: SwapPanelProps
           Autres idées
         </h3>
         <p className="text-body-sm text-text-muted">
-          Des repas aux calories proches. La portion s’ajuste pour que ta journée reste équilibrée.
+          Des repas aux calories proches. Les quantités s’ajustent pour que ta journée reste équilibrée.
         </p>
         {candidates.length === 0 ? (
           <p className="rounded-02 bg-surface p-04 text-body text-text-muted shadow-pressed">

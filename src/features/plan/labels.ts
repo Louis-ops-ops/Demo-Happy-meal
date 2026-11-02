@@ -34,8 +34,3 @@ export function formatRange(start: IsoDate, days: number): string {
   const sameMonth = first.getUTCMonth() === last.getUTCMonth()
   return `du ${sameMonth ? first.getUTCDate() : dayMonth.format(first)} au ${dayMonth.format(last)}`
 }
-
-/** "1,25 portion" / "1 portion": French uses the singular below 2. */
-export function formatPortions(portions: number): string {
-  return `${new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 2 }).format(portions)} portion${portions >= 2 ? 's' : ''}`
-}

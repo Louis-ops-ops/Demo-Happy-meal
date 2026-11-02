@@ -8,7 +8,6 @@ import {
   deleteJournalEntry,
   planKey,
   setPlanMealEaten,
-  setPlanMealPortions,
   type JournalEntry,
 } from '../../data/db'
 import { recipeEntryNutrients } from '../../domain/journal'
@@ -89,9 +88,6 @@ export function TodayPage() {
                         value,
                       )
                     }
-                    onPortions={(portions) =>
-                      setPlanMealPortions(meal, portions, recipeEntryNutrients(recipe.nutrition, portions))
-                    }
                   />
                 )
               })}
@@ -146,7 +142,7 @@ export function TodayPage() {
 }
 
 const quantityLabel = (entry: JournalEntry) =>
-  entry.kind === 'food' ? `${formatInt(entry.quantity)} g` : `${entry.quantity} portion`
+  entry.kind === 'food' ? `${formatInt(entry.quantity)} g` : 'Recette'
 
 type NoMealsProps = { hasPlan: boolean; hasDraft: boolean; onPlan: () => void }
 

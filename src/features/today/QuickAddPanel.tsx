@@ -2,7 +2,6 @@ import { useMemo, useState } from 'react'
 import { Button } from '../../components/Button'
 import { Chip } from '../../components/Chip'
 import { Icon } from '../../components/Icon'
-import { QuantityStepper } from '../../components/QuantityStepper'
 import { SearchField } from '../../components/SearchField'
 import { SegmentedControl } from '../../components/SegmentedControl'
 import { SidePanel } from '../../components/SidePanel'
@@ -14,7 +13,7 @@ import { defaultSlot, foodEntryNutrients, recipeEntryNutrients } from '../../dom
 import { normalize } from '../../domain/text'
 import type { IsoDate, MealSlot, Nutrients } from '../../domain/types'
 import { formatDecimal, formatInt } from '../format'
-import { SLOT_SHORT_LABELS, formatPortions } from '../plan/labels'
+import { SLOT_SHORT_LABELS } from '../plan/labels'
 
 type Picked = { kind: 'food'; food: IndexedFood } | { kind: 'recipe'; recipe: IndexedRecipe }
 
@@ -39,7 +38,6 @@ export function QuickAddPanel({ data, date, onAdd, onClose }: QuickAddPanelProps
   const [picked, setPicked] = useState<Picked | null>(null)
   const [slot, setSlot] = useState<MealSlot>(() => defaultSlot(new Date().getHours()))
   const [grams, setGrams] = useState('100')
-  const [portions, setPortions] = useState(1)
 
   const results = useMemo(() => {
     const key = normalize(query).trim()
@@ -50,7 +48,7 @@ export function QuickAddPanel({ data, date, onAdd, onClose }: QuickAddPanelProps
     }
   }, [data, query])
 
-  const quantity = picked?.kind === 'food' ? Number(grams.replace(',', '.')) : portions
+  const quantity = picked?.kind === 'food' ? Number(grams.replace(',', '.')) : 1
   const valid = Number.isFinite(quantity) && quantity > 0
   let nutrients: Nutrients | null = null
   if (picked && valid) {
@@ -63,7 +61,6 @@ export function QuickAddPanel({ data, date, onAdd, onClose }: QuickAddPanelProps
   function pick(next: Picked) {
     setPicked(next)
     setGrams('100')
-    setPortions(1)
   }
 
   function add() {
@@ -99,7 +96,7 @@ export function QuickAddPanel({ data, date, onAdd, onClose }: QuickAddPanelProps
               <li key={recipe.id}>
                 <ResultRow
                   title={recipe.title}
-                  detail={`Recette · ${formatInt(recipe.nutrition.kcal)} kcal par portion`}
+                  detail={`Recette · ${formatInt(recipe.nutrition.kcal)} kcal`}
                   onClick={() => pick({ kind: 'recipe', recipe })}
                 />
               </li>
@@ -148,20 +145,7 @@ export function QuickAddPanel({ data, date, onAdd, onClose }: QuickAddPanelProps
                 ))}
               </div>
             </div>
-          ) : (
-            <div className="flex items-center justify-between gap-03">
-              <span className="text-label text-text">Portions</span>
-              <QuantityStepper
-                label="Portions"
-                value={portions}
-                min={0.25}
-                max={6}
-                step={0.25}
-                format={formatPortions}
-                onChange={setPortions}
-              />
-            </div>
-          )}
+          ) : null}
 
           <div className="flex flex-col gap-02">
             <span className="text-label text-text">Repas</span>

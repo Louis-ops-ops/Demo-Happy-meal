@@ -1,30 +1,28 @@
 import { cn } from '../../components/cn'
 import { Icon } from '../../components/Icon'
-import { QuantityStepper } from '../../components/QuantityStepper'
 import { RecipeCard } from '../../components/RecipeCard'
 import type { IndexedRecipe } from '../../data/reference'
-import { formatInt } from '../format'
-import { SLOT_LABELS, formatPortions } from '../plan/labels'
-import { mealKcal, recipeClay } from '../plan/view'
 import type { MealSlot } from '../../domain/types'
+import { SLOT_LABELS } from '../plan/labels'
+import { mealMeta, recipeClay } from '../plan/view'
 
 export type MealItemProps = {
   slot: MealSlot
   recipe: IndexedRecipe
+  /** Scale of the recipe planned for the person (only used for the kcal shown). */
   portions: number
   eaten: boolean
   onEaten: (eaten: boolean) => void
-  onPortions: (portions: number) => void
 }
 
-/** A meal of today's plan: tick it as eaten, adjust the portion. */
-export function MealItem({ slot, recipe, portions, eaten, onEaten, onPortions }: MealItemProps) {
+/** A meal of today's plan: one dish to cook as planned, ticked once eaten. */
+export function MealItem({ slot, recipe, portions, eaten, onEaten }: MealItemProps) {
   return (
     <li className="flex flex-col gap-02">
       <p className="text-overline-caps text-text-muted">{SLOT_LABELS[slot]}</p>
       <RecipeCard
         title={recipe.title}
-        meta={`${recipe.minutes} min · ${formatInt(mealKcal(recipe, portions))} kcal`}
+        meta={mealMeta(recipe, portions)}
         clay={recipeClay(recipe)}
         action={
           <button
@@ -42,17 +40,6 @@ export function MealItem({ slot, recipe, portions, eaten, onEaten, onPortions }:
           </button>
         }
       />
-      <div className="flex justify-end px-02">
-        <QuantityStepper
-          label={`Portion : ${recipe.title}`}
-          value={portions}
-          min={0.5}
-          max={3}
-          step={0.25}
-          format={formatPortions}
-          onChange={onPortions}
-        />
-      </div>
     </li>
   )
 }

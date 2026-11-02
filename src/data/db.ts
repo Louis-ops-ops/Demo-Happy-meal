@@ -155,21 +155,6 @@ export async function setPlanMealEaten(entry: JournalEntry & { planKey: string }
   })
 }
 
-/** Changes the portions of a planned meal; keeps its journal entry in step when it is already eaten. */
-export async function setPlanMealPortions(
-  meal: PlanMealRow,
-  portions: number,
-  eatenNutrients: Nutrients,
-): Promise<void> {
-  await db.transaction('rw', db.planMeals, db.journal, async () => {
-    await db.planMeals.update([meal.planId, meal.day, meal.index], { portions })
-    await db.journal
-      .where('planKey')
-      .equals(planKey(meal.planId, meal.day, meal.index))
-      .modify({ quantity: portions, nutrients: eatenNutrients })
-  })
-}
-
 export async function addJournalEntry(entry: JournalEntry): Promise<void> {
   await db.journal.add(entry)
 }
