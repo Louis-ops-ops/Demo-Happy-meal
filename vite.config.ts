@@ -45,6 +45,13 @@ export default defineConfig(({ mode }) => {
       include: ['src/**/*.test.ts'],
       environment: 'node',
       passWithNoTests: true,
+      coverage: {
+        provider: 'v8',
+        include: ['src/domain/**/*.ts'],
+        exclude: ['src/domain/**/*.test.ts', 'src/domain/index.ts', 'src/domain/types.ts'],
+        // CLAUDE.md: nutrition calculations must be fully tested.
+        thresholds: { lines: 100, functions: 100, branches: 100, statements: 100 },
+      },
     },
   }
 })

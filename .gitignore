@@ -4,3 +4,4 @@ dist-desktop
 *.local
 .vercel
 .DS_Store
+coverage
