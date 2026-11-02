@@ -9,6 +9,8 @@ import { OnboardingRoutes } from '../features/onboarding/OnboardingRoutes'
 import { PlanPage } from '../features/plan/PlanPage'
 import { PlanSetupPage } from '../features/plan/PlanSetupPage'
 import { TodayPage } from '../features/today/TodayPage'
+import { toIsoDate } from '../domain/dates'
+import { dayNutrients } from '../domain/journal'
 import { appPath } from '../platform'
 import { PlaceholderPage } from './PlaceholderPage'
 
@@ -24,12 +26,17 @@ const navItems: ReadonlyArray<NavItem> = [
 
 function AppLayout() {
   const profile = useLiveQuery(() => db.profile.get('me'))
+  const today = toIsoDate(new Date())
+  const eatenKcal = useLiveQuery(
+    async () => dayNutrients(await db.journal.where('date').equals(today).toArray()).kcal,
+    [today],
+  )
 
   return (
     <AppShell
       items={navItems}
       homePath={appPath()}
-      sidebarFooter={profile ? <KcalSummary value={0} target={profile.kcalTarget} /> : undefined}
+      sidebarFooter={profile ? <KcalSummary value={eatenKcal ?? 0} target={profile.kcalTarget} /> : undefined}
     >
       <Suspense fallback={null}>
         <Outlet />

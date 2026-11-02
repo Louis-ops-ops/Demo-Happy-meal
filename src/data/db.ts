@@ -1,7 +1,7 @@
 import Dexie, { type EntityTable, type Table } from 'dexie'
 import type { Diet } from '../domain/diet'
 import type { PlannedMeal } from '../domain/plan'
-import type { ActivityLevel, IsoDate, MacroTargets, Pace, Sex } from '../domain/types'
+import type { ActivityLevel, IsoDate, MacroTargets, MealSlot, Nutrients, Pace, Sex } from '../domain/types'
 
 /** The single user profile (id "me"). Current weight lives in weighIns. */
 export type Profile = {
@@ -42,6 +42,24 @@ export type PlanRow = {
 
 export type PlanMealRow = PlannedMeal & { planId: string }
 
+/** One thing eaten. Nutrients are stored (not recomputed) so the history stays true if recipes change. */
+export type JournalEntry = {
+  id?: number
+  date: IsoDate
+  slot: MealSlot
+  label: string
+  kind: 'plan' | 'recipe' | 'food'
+  recipeId?: string
+  foodId?: string
+  /** Servings for a recipe, grams for a food. */
+  quantity: number
+  nutrients: Nutrients
+  /** `${planId}:${day}:${index}` when this ticks a meal of the plan. */
+  planKey?: string
+}
+
+export const planKey = (planId: string, day: number, index: number) => `${planId}:${day}:${index}`
+
 export type CurrentPlan = { plan: PlanRow; meals: PlanMealRow[] }
 
 class HappyMealDb extends Dexie {
@@ -49,6 +67,7 @@ class HappyMealDb extends Dexie {
   weighIns!: EntityTable<WeighInRow, 'date'>
   plans!: EntityTable<PlanRow, 'id'>
   planMeals!: Table<PlanMealRow, [string, number, number]>
+  journal!: EntityTable<JournalEntry, 'id'>
 
   constructor() {
     super('happy-meal')
@@ -59,6 +78,9 @@ class HappyMealDb extends Dexie {
     this.version(2).stores({
       plans: 'id, status',
       planMeals: '[planId+day+index], planId',
+    })
+    this.version(3).stores({
+      journal: '++id, date, planKey',
     })
   }
 }
@@ -116,4 +138,42 @@ export async function activatePlan(planId: string): Promise<void> {
     await deletePlans(others as string[])
     await db.plans.update(planId, { status: 'active' })
   })
+}
+
+export async function getActivePlan(): Promise<CurrentPlan | null> {
+  const plan = (await db.plans.where('status').equals('active').first()) ?? null
+  if (!plan) return null
+  const meals = await db.planMeals.where('planId').equals(plan.id).toArray()
+  return { plan, meals: meals.sort((a, b) => a.day - b.day || a.index - b.index) }
+}
+
+/** Ticks a meal of the plan as eaten (or removes the tick). One entry per plan meal. */
+export async function setPlanMealEaten(entry: JournalEntry & { planKey: string }, eaten: boolean): Promise<void> {
+  await db.transaction('rw', db.journal, async () => {
+    await db.journal.where('planKey').equals(entry.planKey).delete()
+    if (eaten) await db.journal.add(entry)
+  })
+}
+
+/** Changes the portions of a planned meal; keeps its journal entry in step when it is already eaten. */
+export async function setPlanMealPortions(
+  meal: PlanMealRow,
+  portions: number,
+  eatenNutrients: Nutrients,
+): Promise<void> {
+  await db.transaction('rw', db.planMeals, db.journal, async () => {
+    await db.planMeals.update([meal.planId, meal.day, meal.index], { portions })
+    await db.journal
+      .where('planKey')
+      .equals(planKey(meal.planId, meal.day, meal.index))
+      .modify({ quantity: portions, nutrients: eatenNutrients })
+  })
+}
+
+export async function addJournalEntry(entry: JournalEntry): Promise<void> {
+  await db.journal.add(entry)
+}
+
+export async function deleteJournalEntry(id: number): Promise<void> {
+  await db.journal.delete(id)
 }

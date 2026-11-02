@@ -1,6 +1,7 @@
 export * from './body'
 export * from './dates'
 export * from './diet'
+export * from './journal'
 export * from './nutrition'
 export * from './plan'
 export * from './targets'

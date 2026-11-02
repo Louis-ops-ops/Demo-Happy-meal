@@ -8,6 +8,14 @@ export const SLOT_LABELS: Record<MealSlot, string> = {
   dinner: 'Dîner',
 }
 
+/** Short names for narrow controls. */
+export const SLOT_SHORT_LABELS: Record<MealSlot, string> = {
+  breakfast: 'Matin',
+  lunch: 'Midi',
+  snack: 'Collation',
+  dinner: 'Soir',
+}
+
 const weekday = new Intl.DateTimeFormat('fr-FR', { weekday: 'short', timeZone: 'UTC' })
 const weekdayLong = new Intl.DateTimeFormat('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC' })
 const dayMonth = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', timeZone: 'UTC' })
