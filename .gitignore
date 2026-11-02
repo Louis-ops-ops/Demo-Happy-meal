@@ -5,3 +5,4 @@ dist-desktop
 .vercel
 .DS_Store
 coverage
+scripts/.cache

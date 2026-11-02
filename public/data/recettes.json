@@ -1,0 +1,2942 @@
+{
+  "license": "CC0-1.0",
+  "recipes": [
+    {
+      "id": "porridge-pomme-cannelle",
+      "title": "Porridge pomme et cannelle",
+      "minutes": 10,
+      "servings": 1,
+      "slots": [
+        "breakfast"
+      ],
+      "protein": "laitier",
+      "ingredients": [
+        {
+          "foodId": "32140",
+          "grams": 50,
+          "label": "flocons d'avoine"
+        },
+        {
+          "foodId": "19041",
+          "grams": 200,
+          "label": "lait demi-écrémé",
+          "display": "20 cl"
+        },
+        {
+          "foodId": "13039",
+          "grams": 120,
+          "label": "pomme",
+          "display": "1 petite pomme"
+        },
+        {
+          "foodId": "11025",
+          "grams": 1,
+          "label": "cannelle",
+          "display": "1 pincée"
+        },
+        {
+          "foodId": "15005",
+          "grams": 10,
+          "label": "cerneaux de noix"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Coupe la pomme en petits dés, sans l'éplucher."
+        },
+        {
+          "text": "Verse les flocons, le lait et la moitié des dés de pomme dans une casserole. Fais cuire à feu doux en remuant jusqu'à ce que ce soit crémeux.",
+          "timerMinutes": 5
+        },
+        {
+          "text": "Verse dans un bol, ajoute le reste de pomme, la cannelle et les noix concassées."
+        }
+      ],
+      "equipment": [
+        "casserole"
+      ]
+    },
+    {
+      "id": "tartines-avocat-oeuf",
+      "title": "Tartines avocat et œuf mollet",
+      "minutes": 12,
+      "servings": 1,
+      "slots": [
+        "breakfast"
+      ],
+      "protein": "oeuf",
+      "ingredients": [
+        {
+          "foodId": "7110",
+          "grams": 70,
+          "label": "pain complet",
+          "display": "2 tranches"
+        },
+        {
+          "foodId": "13004",
+          "grams": 70,
+          "label": "avocat",
+          "display": "½ avocat"
+        },
+        {
+          "foodId": "22000",
+          "grams": 50,
+          "label": "œuf",
+          "display": "1 œuf"
+        },
+        {
+          "foodId": "13009",
+          "grams": 5,
+          "label": "jus de citron",
+          "display": "quelques gouttes"
+        },
+        {
+          "foodId": "11015",
+          "grams": 0.5,
+          "label": "poivre"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Plonge l'œuf dans l'eau bouillante.",
+          "timerMinutes": 6
+        },
+        {
+          "text": "Pendant ce temps, fais griller le pain. Écrase l'avocat à la fourchette avec le citron et le poivre."
+        },
+        {
+          "text": "Passe l'œuf sous l'eau froide, écale-le, coupe-le en deux et pose-le sur les tartines d'avocat."
+        }
+      ],
+      "equipment": [
+        "casserole"
+      ]
+    },
+    {
+      "id": "bol-yaourt-grec-myrtilles",
+      "title": "Bol de yaourt grec, myrtilles et amandes",
+      "minutes": 5,
+      "servings": 1,
+      "slots": [
+        "breakfast"
+      ],
+      "protein": "laitier",
+      "ingredients": [
+        {
+          "foodId": "19860",
+          "grams": 150,
+          "label": "yaourt à la grecque nature"
+        },
+        {
+          "foodId": "13028",
+          "grams": 80,
+          "label": "myrtilles"
+        },
+        {
+          "foodId": "32140",
+          "grams": 30,
+          "label": "flocons d'avoine"
+        },
+        {
+          "foodId": "31008",
+          "grams": 10,
+          "label": "miel",
+          "display": "1 c. à café"
+        },
+        {
+          "foodId": "15000",
+          "grams": 10,
+          "label": "amandes"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Verse le yaourt dans un bol."
+        },
+        {
+          "text": "Ajoute les flocons d'avoine, les myrtilles et les amandes concassées."
+        },
+        {
+          "text": "Termine par un filet de miel."
+        }
+      ],
+      "equipment": []
+    },
+    {
+      "id": "omelette-epinards-feta",
+      "title": "Omelette aux épinards et à la feta",
+      "minutes": 10,
+      "servings": 1,
+      "slots": [
+        "breakfast"
+      ],
+      "protein": "oeuf",
+      "clay": "oeuf",
+      "ingredients": [
+        {
+          "foodId": "22000",
+          "grams": 100,
+          "label": "œufs",
+          "display": "2 œufs"
+        },
+        {
+          "foodId": "20059",
+          "grams": 60,
+          "label": "jeunes pousses d’épinards",
+          "display": "2 poignées"
+        },
+        {
+          "foodId": "12066",
+          "grams": 25,
+          "label": "feta"
+        },
+        {
+          "foodId": "17270",
+          "grams": 5,
+          "label": "huile d'olive",
+          "display": "1 c. à café"
+        },
+        {
+          "foodId": "7110",
+          "grams": 40,
+          "label": "pain complet",
+          "display": "1 tranche"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Fais chauffer l'huile dans une poêle et fais tomber les épinards.",
+          "timerMinutes": 2
+        },
+        {
+          "text": "Bats les œufs, verse-les sur les épinards et laisse prendre à feu moyen.",
+          "timerMinutes": 3
+        },
+        {
+          "text": "Émiette la feta dessus, plie l’omelette en deux et sers avec le pain."
+        }
+      ],
+      "equipment": [
+        "poele"
+      ]
+    },
+    {
+      "id": "pancakes-banane-avoine",
+      "title": "Pancakes banane et flocons d'avoine",
+      "minutes": 20,
+      "servings": 2,
+      "slots": [
+        "breakfast"
+      ],
+      "protein": "oeuf",
+      "clay": "oeuf",
+      "ingredients": [
+        {
+          "foodId": "13005",
+          "grams": 120,
+          "label": "banane bien mûre",
+          "display": "1 grosse banane"
+        },
+        {
+          "foodId": "22000",
+          "grams": 100,
+          "label": "œufs",
+          "display": "2 œufs"
+        },
+        {
+          "foodId": "32140",
+          "grams": 80,
+          "label": "flocons d'avoine"
+        },
+        {
+          "foodId": "19041",
+          "grams": 60,
+          "label": "lait demi-écrémé",
+          "display": "6 cl"
+        },
+        {
+          "foodId": "11046",
+          "grams": 4,
+          "label": "levure chimique",
+          "display": "1 c. à café"
+        },
+        {
+          "foodId": "17270",
+          "grams": 5,
+          "label": "huile",
+          "display": "1 c. à café"
+        },
+        {
+          "foodId": "13028",
+          "grams": 100,
+          "label": "myrtilles"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Mixe la banane, les œufs, les flocons, le lait et la levure jusqu’à obtenir une pâte épaisse."
+        },
+        {
+          "text": "Laisse reposer la pâte, les flocons gonflent.",
+          "timerMinutes": 5
+        },
+        {
+          "text": "Huile légèrement la poêle et verse une petite louche de pâte par pancake. Retourne-les quand des bulles apparaissent.",
+          "timerMinutes": 8
+        },
+        {
+          "text": "Sers avec les myrtilles."
+        }
+      ],
+      "equipment": [
+        "mixeur",
+        "poele"
+      ]
+    },
+    {
+      "id": "fromage-blanc-fruits-rouges",
+      "title": "Fromage blanc aux fruits rouges",
+      "minutes": 5,
+      "servings": 1,
+      "slots": [
+        "breakfast"
+      ],
+      "protein": "laitier",
+      "ingredients": [
+        {
+          "foodId": "19646",
+          "grams": 200,
+          "label": "fromage blanc 3 %"
+        },
+        {
+          "foodId": "13014",
+          "grams": 100,
+          "label": "fraises"
+        },
+        {
+          "foodId": "13015",
+          "grams": 50,
+          "label": "framboises"
+        },
+        {
+          "foodId": "32140",
+          "grams": 30,
+          "label": "flocons d'avoine"
+        },
+        {
+          "foodId": "31034",
+          "grams": 10,
+          "label": "sirop d'érable",
+          "display": "1 c. à café"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Lave et coupe les fraises en morceaux."
+        },
+        {
+          "text": "Dispose le fromage blanc dans un bol, ajoute les fruits et les flocons."
+        },
+        {
+          "text": "Arrose d'un filet de sirop d'érable."
+        }
+      ],
+      "equipment": []
+    },
+    {
+      "id": "chia-pudding-mangue",
+      "title": "Pudding de chia à la mangue",
+      "minutes": 10,
+      "servings": 2,
+      "slots": [
+        "breakfast"
+      ],
+      "protein": null,
+      "ingredients": [
+        {
+          "foodId": "15047",
+          "grams": 50,
+          "label": "graines de chia"
+        },
+        {
+          "foodId": "18901",
+          "grams": 350,
+          "label": "boisson au soja nature",
+          "display": "35 cl"
+        },
+        {
+          "foodId": "13025",
+          "grams": 200,
+          "label": "mangue",
+          "display": "1 petite mangue"
+        },
+        {
+          "foodId": "31034",
+          "grams": 20,
+          "label": "sirop d'érable",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "15000",
+          "grams": 20,
+          "label": "amandes"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Mélange les graines de chia, la boisson au soja et le sirop d'érable. Remue de nouveau après quelques minutes pour éviter les grumeaux."
+        },
+        {
+          "text": "Couvre et laisse prendre au frais toute la nuit (ou au moins 4 heures)."
+        },
+        {
+          "text": "Au moment de servir, ajoute la mangue en dés et les amandes concassées."
+        }
+      ],
+      "equipment": [
+        "saladier"
+      ]
+    },
+    {
+      "id": "tartines-cacahuete-banane",
+      "title": "Tartines beurre de cacahuète et banane",
+      "minutes": 5,
+      "servings": 1,
+      "slots": [
+        "breakfast"
+      ],
+      "protein": null,
+      "ingredients": [
+        {
+          "foodId": "7110",
+          "grams": 70,
+          "label": "pain complet",
+          "display": "2 tranches"
+        },
+        {
+          "foodId": "15202",
+          "grams": 20,
+          "label": "beurre de cacahuète",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "13005",
+          "grams": 100,
+          "label": "banane",
+          "display": "1 banane"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Fais griller le pain."
+        },
+        {
+          "text": "Tartine le beurre de cacahuète et ajoute la banane en rondelles."
+        }
+      ],
+      "equipment": []
+    },
+    {
+      "id": "pomme-beurre-cacahuete",
+      "title": "Pomme et beurre de cacahuète",
+      "minutes": 3,
+      "servings": 1,
+      "slots": [
+        "snack"
+      ],
+      "protein": null,
+      "ingredients": [
+        {
+          "foodId": "13039",
+          "grams": 150,
+          "label": "pomme",
+          "display": "1 pomme"
+        },
+        {
+          "foodId": "15202",
+          "grams": 15,
+          "label": "beurre de cacahuète",
+          "display": "1 c. à soupe rase"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Coupe la pomme en quartiers et retire le cœur."
+        },
+        {
+          "text": "Trempe les quartiers dans le beurre de cacahuète."
+        }
+      ],
+      "equipment": []
+    },
+    {
+      "id": "yaourt-miel-noix",
+      "title": "Yaourt, miel et noix",
+      "minutes": 2,
+      "servings": 1,
+      "slots": [
+        "snack"
+      ],
+      "protein": "laitier",
+      "ingredients": [
+        {
+          "foodId": "19593",
+          "grams": 125,
+          "label": "yaourt nature",
+          "display": "1 pot"
+        },
+        {
+          "foodId": "31008",
+          "grams": 8,
+          "label": "miel",
+          "display": "1 c. à café"
+        },
+        {
+          "foodId": "15005",
+          "grams": 10,
+          "label": "cerneaux de noix"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Verse le miel sur le yaourt et ajoute les noix concassées."
+        }
+      ],
+      "equipment": []
+    },
+    {
+      "id": "houmous-crudites",
+      "title": "Houmous maison et bâtonnets de légumes",
+      "minutes": 15,
+      "servings": 4,
+      "slots": [
+        "snack"
+      ],
+      "protein": "legumineuses",
+      "ingredients": [
+        {
+          "foodId": "20532",
+          "grams": 250,
+          "label": "pois chiches cuits",
+          "display": "1 boîte égouttée"
+        },
+        {
+          "foodId": "17270",
+          "grams": 20,
+          "label": "huile d'olive",
+          "display": "2 c. à soupe"
+        },
+        {
+          "foodId": "13009",
+          "grams": 30,
+          "label": "jus de citron",
+          "display": "½ citron"
+        },
+        {
+          "foodId": "11000",
+          "grams": 5,
+          "label": "ail",
+          "display": "1 gousse"
+        },
+        {
+          "foodId": "11042",
+          "grams": 2,
+          "label": "cumin"
+        },
+        {
+          "foodId": "20009",
+          "grams": 300,
+          "label": "carottes",
+          "display": "3 carottes"
+        },
+        {
+          "foodId": "20019",
+          "grams": 200,
+          "label": "concombre",
+          "display": "½ concombre"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Mixe les pois chiches avec l'huile, le citron, l'ail, le cumin et 3 cuillères à soupe d'eau jusqu'à ce que ce soit lisse."
+        },
+        {
+          "text": "Coupe les carottes et le concombre en bâtonnets."
+        },
+        {
+          "text": "Garde l'houmous au frais, il se conserve 3 jours."
+        }
+      ],
+      "equipment": [
+        "mixeur"
+      ]
+    },
+    {
+      "id": "energy-balls-dattes-cacao",
+      "title": "Bouchées dattes, amandes et cacao",
+      "minutes": 15,
+      "servings": 6,
+      "slots": [
+        "snack"
+      ],
+      "protein": null,
+      "ingredients": [
+        {
+          "foodId": "13011",
+          "grams": 120,
+          "label": "dattes dénoyautées"
+        },
+        {
+          "foodId": "15000",
+          "grams": 60,
+          "label": "amandes"
+        },
+        {
+          "foodId": "32140",
+          "grams": 40,
+          "label": "flocons d'avoine"
+        },
+        {
+          "foodId": "18100",
+          "grams": 10,
+          "label": "cacao non sucré",
+          "display": "1 c. à soupe"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Mixe les amandes et les flocons en poudre grossière."
+        },
+        {
+          "text": "Ajoute les dattes et le cacao, mixe jusqu'à obtenir une pâte qui se tient."
+        },
+        {
+          "text": "Forme 12 petites boules (2 par portion) et garde-les au frais."
+        }
+      ],
+      "equipment": [
+        "mixeur"
+      ]
+    },
+    {
+      "id": "smoothie-banane-fraise",
+      "title": "Smoothie banane et fraise",
+      "minutes": 5,
+      "servings": 1,
+      "slots": [
+        "snack"
+      ],
+      "protein": "laitier",
+      "ingredients": [
+        {
+          "foodId": "13005",
+          "grams": 100,
+          "label": "banane",
+          "display": "1 banane"
+        },
+        {
+          "foodId": "13014",
+          "grams": 100,
+          "label": "fraises"
+        },
+        {
+          "foodId": "19593",
+          "grams": 125,
+          "label": "yaourt nature",
+          "display": "1 pot"
+        },
+        {
+          "foodId": "19041",
+          "grams": 100,
+          "label": "lait demi-écrémé",
+          "display": "10 cl"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Mets tous les ingrédients dans le mixeur et mixe jusqu’à ce que ce soit lisse."
+        },
+        {
+          "text": "Sers bien frais."
+        }
+      ],
+      "equipment": [
+        "mixeur"
+      ]
+    },
+    {
+      "id": "pois-chiches-grilles-paprika",
+      "title": "Pois chiches croustillants au paprika",
+      "minutes": 30,
+      "servings": 4,
+      "slots": [
+        "snack"
+      ],
+      "protein": "legumineuses",
+      "ingredients": [
+        {
+          "foodId": "20532",
+          "grams": 400,
+          "label": "pois chiches cuits",
+          "display": "1 grande boîte égouttée"
+        },
+        {
+          "foodId": "17270",
+          "grams": 15,
+          "label": "huile d'olive",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "11049",
+          "grams": 3,
+          "label": "paprika",
+          "display": "1 c. à café"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Préchauffe le four à 200 °C. Égoutte et sèche bien les pois chiches dans un torchon."
+        },
+        {
+          "text": "Mélange-les avec l'huile et le paprika, étale-les sur une plaque."
+        },
+        {
+          "text": "Fais-les griller en secouant la plaque à mi-cuisson.",
+          "timerMinutes": 25
+        },
+        {
+          "text": "Laisse refroidir : ils deviennent croustillants en tiédissant."
+        }
+      ],
+      "equipment": [
+        "four"
+      ]
+    },
+    {
+      "id": "curry-lentilles-corail",
+      "title": "Curry de lentilles corail",
+      "minutes": 30,
+      "servings": 4,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "legumineuses",
+      "clay": "casserole",
+      "ingredients": [
+        {
+          "foodId": "20535",
+          "grams": 250,
+          "label": "lentilles corail"
+        },
+        {
+          "foodId": "18041",
+          "grams": 200,
+          "label": "lait de coco",
+          "display": "20 cl"
+        },
+        {
+          "foodId": "20137",
+          "grams": 400,
+          "label": "tomates pelées",
+          "display": "1 boîte"
+        },
+        {
+          "foodId": "20034",
+          "grams": 100,
+          "label": "oignon",
+          "display": "1 oignon"
+        },
+        {
+          "foodId": "11000",
+          "grams": 10,
+          "label": "ail",
+          "display": "2 gousses"
+        },
+        {
+          "foodId": "11074",
+          "grams": 10,
+          "label": "gingembre frais"
+        },
+        {
+          "foodId": "11005",
+          "grams": 8,
+          "label": "curry en poudre",
+          "display": "2 c. à café"
+        },
+        {
+          "foodId": "17270",
+          "grams": 10,
+          "label": "huile",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "9100",
+          "grams": 240,
+          "label": "riz basmati"
+        },
+        {
+          "foodId": "11094",
+          "grams": 10,
+          "label": "coriandre fraîche"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Fais revenir l'oignon émincé dans l'huile, puis ajoute l'ail et le gingembre râpés et le curry.",
+          "timerMinutes": 4
+        },
+        {
+          "text": "Ajoute les lentilles rincées, les tomates, le lait de coco et 40 cl d'eau. Laisse mijoter en remuant de temps en temps.",
+          "timerMinutes": 20
+        },
+        {
+          "text": "Pendant ce temps, fais cuire le riz.",
+          "timerMinutes": 12
+        },
+        {
+          "text": "Sers le curry sur le riz et parsème de coriandre."
+        }
+      ],
+      "equipment": [
+        "cocotte",
+        "casserole"
+      ]
+    },
+    {
+      "id": "poulet-tomate-ail",
+      "title": "Poulet mijoté tomate et ail",
+      "minutes": 35,
+      "servings": 4,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "volaille",
+      "clay": "blanc-de-poulet",
+      "ingredients": [
+        {
+          "foodId": "36017",
+          "grams": 500,
+          "label": "filets de poulet"
+        },
+        {
+          "foodId": "20137",
+          "grams": 400,
+          "label": "tomates pelées",
+          "display": "1 boîte"
+        },
+        {
+          "foodId": "11000",
+          "grams": 15,
+          "label": "ail",
+          "display": "3 gousses"
+        },
+        {
+          "foodId": "20034",
+          "grams": 100,
+          "label": "oignon",
+          "display": "1 oignon"
+        },
+        {
+          "foodId": "17270",
+          "grams": 15,
+          "label": "huile d'olive",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "11060",
+          "grams": 2,
+          "label": "herbes de Provence"
+        },
+        {
+          "foodId": "9102",
+          "grams": 280,
+          "label": "riz complet"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Mets le riz complet à cuire.",
+          "timerMinutes": 30
+        },
+        {
+          "text": "Coupe le poulet en morceaux et fais-le dorer dans l'huile.",
+          "timerMinutes": 5
+        },
+        {
+          "text": "Ajoute l'oignon émincé et l'ail écrasé, puis les tomates et les herbes. Couvre et laisse mijoter.",
+          "timerMinutes": 20
+        },
+        {
+          "text": "Goûte, ajuste le poivre et sers avec le riz."
+        }
+      ],
+      "equipment": [
+        "cocotte",
+        "casserole"
+      ]
+    },
+    {
+      "id": "ratatouille-quinoa-feta",
+      "title": "Ratatouille, quinoa et feta",
+      "minutes": 45,
+      "servings": 4,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "laitier",
+      "clay": "aubergine",
+      "ingredients": [
+        {
+          "foodId": "20053",
+          "grams": 300,
+          "label": "aubergine",
+          "display": "1 aubergine"
+        },
+        {
+          "foodId": "20020",
+          "grams": 300,
+          "label": "courgettes",
+          "display": "2 courgettes"
+        },
+        {
+          "foodId": "20087",
+          "grams": 200,
+          "label": "poivron rouge",
+          "display": "1 poivron"
+        },
+        {
+          "foodId": "20276",
+          "grams": 300,
+          "label": "tomates",
+          "display": "3 tomates"
+        },
+        {
+          "foodId": "20034",
+          "grams": 100,
+          "label": "oignon",
+          "display": "1 oignon"
+        },
+        {
+          "foodId": "11000",
+          "grams": 10,
+          "label": "ail",
+          "display": "2 gousses"
+        },
+        {
+          "foodId": "17270",
+          "grams": 30,
+          "label": "huile d'olive",
+          "display": "2 c. à soupe"
+        },
+        {
+          "foodId": "11060",
+          "grams": 2,
+          "label": "herbes de Provence"
+        },
+        {
+          "foodId": "9340",
+          "grams": 240,
+          "label": "quinoa"
+        },
+        {
+          "foodId": "12066",
+          "grams": 100,
+          "label": "feta"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Coupe tous les légumes en dés de taille égale."
+        },
+        {
+          "text": "Fais revenir l'oignon et le poivron dans l'huile, puis ajoute l'aubergine.",
+          "timerMinutes": 8
+        },
+        {
+          "text": "Ajoute les courgettes, les tomates, l'ail et les herbes. Couvre et laisse compoter à feu doux.",
+          "timerMinutes": 25
+        },
+        {
+          "text": "Fais cuire le quinoa dans deux fois son volume d’eau.",
+          "timerMinutes": 12
+        },
+        {
+          "text": "Sers la ratatouille sur le quinoa, avec la feta émiettée."
+        }
+      ],
+      "equipment": [
+        "cocotte",
+        "casserole"
+      ]
+    },
+    {
+      "id": "saumon-papillote-courgettes",
+      "title": "Saumon en papillote, courgettes et citron",
+      "minutes": 30,
+      "servings": 2,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "poisson",
+      "clay": "courgette",
+      "ingredients": [
+        {
+          "foodId": "26036",
+          "grams": 260,
+          "label": "pavés de saumon",
+          "display": "2 pavés"
+        },
+        {
+          "foodId": "20020",
+          "grams": 200,
+          "label": "courgette",
+          "display": "1 courgette"
+        },
+        {
+          "foodId": "13009",
+          "grams": 40,
+          "label": "citron",
+          "display": "1 citron"
+        },
+        {
+          "foodId": "11033",
+          "grams": 5,
+          "label": "basilic frais"
+        },
+        {
+          "foodId": "17270",
+          "grams": 10,
+          "label": "huile d'olive",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "4008",
+          "grams": 400,
+          "label": "pommes de terre",
+          "display": "4 pommes de terre"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Fais cuire les pommes de terre à la vapeur ou à l’eau.",
+          "timerMinutes": 20
+        },
+        {
+          "text": "Préchauffe le four à 200 °C. Taille la courgette en fines rondelles et le citron en tranches."
+        },
+        {
+          "text": "Sur deux feuilles de papier cuisson, dépose la courgette, le saumon, le citron, un filet d'huile et le basilic. Ferme les papillotes."
+        },
+        {
+          "text": "Enfourne et laisse cuire.",
+          "timerMinutes": 15
+        },
+        {
+          "text": "Ouvre les papillotes à table, avec les pommes de terre à côté."
+        }
+      ],
+      "equipment": [
+        "four",
+        "casserole"
+      ]
+    },
+    {
+      "id": "steak-hache-patate-douce",
+      "title": "Steak haché, patate douce rôtie et salade",
+      "minutes": 35,
+      "servings": 2,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "boeuf",
+      "clay": "steak-hache",
+      "ingredients": [
+        {
+          "foodId": "6250",
+          "grams": 250,
+          "label": "steaks hachés 5 %",
+          "display": "2 steaks"
+        },
+        {
+          "foodId": "4101",
+          "grams": 500,
+          "label": "patates douces",
+          "display": "2 patates douces"
+        },
+        {
+          "foodId": "17270",
+          "grams": 20,
+          "label": "huile d'olive",
+          "display": "1 c. à soupe + 1 c. à café"
+        },
+        {
+          "foodId": "20031",
+          "grams": 100,
+          "label": "salade verte"
+        },
+        {
+          "foodId": "11013",
+          "grams": 10,
+          "label": "moutarde",
+          "display": "1 c. à café"
+        },
+        {
+          "foodId": "11091",
+          "grams": 10,
+          "label": "vinaigre balsamique",
+          "display": "1 c. à soupe"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Préchauffe le four à 210 °C. Coupe les patates douces en frites épaisses, mélange-les avec la moitié de l’huile."
+        },
+        {
+          "text": "Enfourne en les retournant à mi-cuisson.",
+          "timerMinutes": 25
+        },
+        {
+          "text": "Prépare la vinaigrette avec la moutarde, le vinaigre et le reste de l’huile."
+        },
+        {
+          "text": "Fais cuire les steaks à la poêle selon ta cuisson préférée.",
+          "timerMinutes": 4
+        },
+        {
+          "text": "Sers avec les frites de patate douce et la salade."
+        }
+      ],
+      "equipment": [
+        "four",
+        "poele"
+      ]
+    },
+    {
+      "id": "spaghetti-bolognaise",
+      "title": "Spaghetti bolognaise maison",
+      "minutes": 40,
+      "servings": 4,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "boeuf",
+      "clay": "steak-hache",
+      "ingredients": [
+        {
+          "foodId": "6250",
+          "grams": 400,
+          "label": "bœuf haché 5 %"
+        },
+        {
+          "foodId": "9810",
+          "grams": 320,
+          "label": "spaghetti"
+        },
+        {
+          "foodId": "20137",
+          "grams": 800,
+          "label": "tomates pelées",
+          "display": "2 boîtes"
+        },
+        {
+          "foodId": "20034",
+          "grams": 100,
+          "label": "oignon",
+          "display": "1 oignon"
+        },
+        {
+          "foodId": "20009",
+          "grams": 100,
+          "label": "carotte",
+          "display": "1 carotte"
+        },
+        {
+          "foodId": "11000",
+          "grams": 10,
+          "label": "ail",
+          "display": "2 gousses"
+        },
+        {
+          "foodId": "17270",
+          "grams": 15,
+          "label": "huile d'olive",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "12120",
+          "grams": 30,
+          "label": "parmesan"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Hache finement l'oignon, la carotte et l'ail, fais-les revenir dans l'huile.",
+          "timerMinutes": 5
+        },
+        {
+          "text": "Ajoute le bœuf et fais-le colorer en l’émiettant.",
+          "timerMinutes": 5
+        },
+        {
+          "text": "Verse les tomates, écrase-les à la cuillère et laisse mijoter à couvert.",
+          "timerMinutes": 25
+        },
+        {
+          "text": "Fais cuire les spaghetti al dente.",
+          "timerMinutes": 10
+        },
+        {
+          "text": "Sers la sauce sur les pâtes avec le parmesan."
+        }
+      ],
+      "equipment": [
+        "cocotte",
+        "casserole"
+      ]
+    },
+    {
+      "id": "chili-sin-carne",
+      "title": "Chili sin carne",
+      "minutes": 35,
+      "servings": 4,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "legumineuses",
+      "ingredients": [
+        {
+          "foodId": "20524",
+          "grams": 500,
+          "label": "haricots rouges cuits",
+          "display": "2 boîtes égouttées"
+        },
+        {
+          "foodId": "20066",
+          "grams": 150,
+          "label": "maïs doux"
+        },
+        {
+          "foodId": "20137",
+          "grams": 400,
+          "label": "tomates pelées",
+          "display": "1 boîte"
+        },
+        {
+          "foodId": "20087",
+          "grams": 150,
+          "label": "poivron rouge",
+          "display": "1 poivron"
+        },
+        {
+          "foodId": "20034",
+          "grams": 100,
+          "label": "oignon",
+          "display": "1 oignon"
+        },
+        {
+          "foodId": "11042",
+          "grams": 4,
+          "label": "cumin",
+          "display": "1 c. à café"
+        },
+        {
+          "foodId": "11049",
+          "grams": 4,
+          "label": "paprika",
+          "display": "1 c. à café"
+        },
+        {
+          "foodId": "17270",
+          "grams": 15,
+          "label": "huile",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "9100",
+          "grams": 240,
+          "label": "riz"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Fais revenir l'oignon et le poivron en dés dans l'huile avec les épices.",
+          "timerMinutes": 5
+        },
+        {
+          "text": "Ajoute les tomates, les haricots rincés et le maïs. Laisse mijoter.",
+          "timerMinutes": 20
+        },
+        {
+          "text": "Pendant ce temps, fais cuire le riz.",
+          "timerMinutes": 12
+        },
+        {
+          "text": "Sers bien chaud. Le chili est encore meilleur réchauffé le lendemain."
+        }
+      ],
+      "equipment": [
+        "cocotte",
+        "casserole"
+      ]
+    },
+    {
+      "id": "buddha-bowl-pois-chiches",
+      "title": "Buddha bowl quinoa et pois chiches",
+      "minutes": 25,
+      "servings": 2,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "legumineuses",
+      "ingredients": [
+        {
+          "foodId": "9340",
+          "grams": 120,
+          "label": "quinoa"
+        },
+        {
+          "foodId": "20532",
+          "grams": 240,
+          "label": "pois chiches cuits",
+          "display": "1 boîte égouttée"
+        },
+        {
+          "foodId": "20009",
+          "grams": 150,
+          "label": "carottes",
+          "display": "2 carottes"
+        },
+        {
+          "foodId": "20014",
+          "grams": 100,
+          "label": "chou rouge"
+        },
+        {
+          "foodId": "13004",
+          "grams": 100,
+          "label": "avocat",
+          "display": "1 avocat"
+        },
+        {
+          "foodId": "13009",
+          "grams": 20,
+          "label": "jus de citron",
+          "display": "½ citron"
+        },
+        {
+          "foodId": "17270",
+          "grams": 10,
+          "label": "huile d'olive",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "11042",
+          "grams": 1,
+          "label": "cumin"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Fais cuire le quinoa et laisse-le tiédir.",
+          "timerMinutes": 12
+        },
+        {
+          "text": "Râpe les carottes, émince finement le chou rouge, coupe l’avocat en tranches."
+        },
+        {
+          "text": "Fais dorer les pois chiches à la poêle avec le cumin, ou garde-les tels quels."
+        },
+        {
+          "text": "Compose les bols et arrose d'huile et de citron."
+        }
+      ],
+      "equipment": [
+        "casserole",
+        "saladier"
+      ]
+    },
+    {
+      "id": "wok-dinde-legumes",
+      "title": "Wok de dinde aux légumes croquants",
+      "minutes": 25,
+      "servings": 2,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "volaille",
+      "clay": "poele",
+      "ingredients": [
+        {
+          "foodId": "36304",
+          "grams": 260,
+          "label": "escalopes de dinde",
+          "display": "2 escalopes"
+        },
+        {
+          "foodId": "20057",
+          "grams": 200,
+          "label": "brocoli"
+        },
+        {
+          "foodId": "20168",
+          "grams": 150,
+          "label": "poivron jaune",
+          "display": "1 poivron"
+        },
+        {
+          "foodId": "20009",
+          "grams": 100,
+          "label": "carotte",
+          "display": "1 carotte"
+        },
+        {
+          "foodId": "11104",
+          "grams": 30,
+          "label": "sauce soja",
+          "display": "2 c. à soupe"
+        },
+        {
+          "foodId": "11074",
+          "grams": 10,
+          "label": "gingembre frais"
+        },
+        {
+          "foodId": "11000",
+          "grams": 5,
+          "label": "ail",
+          "display": "1 gousse"
+        },
+        {
+          "foodId": "17400",
+          "grams": 10,
+          "label": "huile de sésame",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "9100",
+          "grams": 140,
+          "label": "riz"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Mets le riz à cuire.",
+          "timerMinutes": 12
+        },
+        {
+          "text": "Taille la dinde en lanières et les légumes en petits morceaux."
+        },
+        {
+          "text": "Saisis la dinde dans l'huile bien chaude, réserve-la.",
+          "timerMinutes": 4
+        },
+        {
+          "text": "Fais sauter les légumes avec l'ail et le gingembre, ils doivent rester croquants.",
+          "timerMinutes": 5
+        },
+        {
+          "text": "Remets la dinde, ajoute la sauce soja, mélange et sers sur le riz."
+        }
+      ],
+      "equipment": [
+        "poele",
+        "casserole"
+      ]
+    },
+    {
+      "id": "tortilla-pommes-de-terre",
+      "title": "Tortilla de pommes de terre",
+      "minutes": 40,
+      "servings": 4,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "oeuf",
+      "clay": "oeuf",
+      "ingredients": [
+        {
+          "foodId": "22000",
+          "grams": 400,
+          "label": "œufs",
+          "display": "8 œufs"
+        },
+        {
+          "foodId": "4008",
+          "grams": 600,
+          "label": "pommes de terre",
+          "display": "6 pommes de terre"
+        },
+        {
+          "foodId": "20034",
+          "grams": 150,
+          "label": "oignons",
+          "display": "2 oignons"
+        },
+        {
+          "foodId": "17270",
+          "grams": 30,
+          "label": "huile d'olive",
+          "display": "2 c. à soupe"
+        },
+        {
+          "foodId": "20031",
+          "grams": 150,
+          "label": "salade verte"
+        },
+        {
+          "foodId": "7110",
+          "grams": 160,
+          "label": "pain complet"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Coupe les pommes de terre en fines lamelles et émince les oignons."
+        },
+        {
+          "text": "Fais-les cuire doucement dans l'huile à couvert, sans les colorer.",
+          "timerMinutes": 20
+        },
+        {
+          "text": "Bats les œufs, ajoute les pommes de terre et les oignons, puis reverse le tout dans la poêle."
+        },
+        {
+          "text": "Laisse prendre à feu doux, retourne la tortilla à l'aide d'une assiette et termine la cuisson.",
+          "timerMinutes": 8
+        },
+        {
+          "text": "Sers tiède avec la salade et le pain."
+        }
+      ],
+      "equipment": [
+        "poele"
+      ]
+    },
+    {
+      "id": "veloute-butternut-lentilles",
+      "title": "Velouté de butternut aux lentilles corail",
+      "minutes": 35,
+      "servings": 4,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "legumineuses",
+      "clay": "cocotte",
+      "ingredients": [
+        {
+          "foodId": "20138",
+          "grams": 800,
+          "label": "courge butternut",
+          "display": "1 courge"
+        },
+        {
+          "foodId": "20535",
+          "grams": 150,
+          "label": "lentilles corail"
+        },
+        {
+          "foodId": "20034",
+          "grams": 100,
+          "label": "oignon",
+          "display": "1 oignon"
+        },
+        {
+          "foodId": "18041",
+          "grams": 100,
+          "label": "lait de coco",
+          "display": "10 cl"
+        },
+        {
+          "foodId": "25948",
+          "grams": 800,
+          "label": "bouillon de légumes",
+          "display": "80 cl"
+        },
+        {
+          "foodId": "17270",
+          "grams": 10,
+          "label": "huile",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "7110",
+          "grams": 240,
+          "label": "pain complet"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Épluche la courge et coupe-la en cubes. Fais revenir l'oignon dans l'huile.",
+          "timerMinutes": 3
+        },
+        {
+          "text": "Ajoute la courge, les lentilles rincées et le bouillon. Laisse cuire à couvert.",
+          "timerMinutes": 25
+        },
+        {
+          "text": "Mixe avec le lait de coco jusqu’à obtenir un velouté lisse."
+        },
+        {
+          "text": "Sers avec le pain grillé."
+        }
+      ],
+      "equipment": [
+        "cocotte",
+        "mixeur"
+      ]
+    },
+    {
+      "id": "salade-nicoise",
+      "title": "Salade niçoise revisitée",
+      "minutes": 25,
+      "servings": 2,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "poisson",
+      "clay": "salade",
+      "ingredients": [
+        {
+          "foodId": "26039",
+          "grams": 140,
+          "label": "thon au naturel",
+          "display": "1 boîte égouttée"
+        },
+        {
+          "foodId": "22000",
+          "grams": 100,
+          "label": "œufs",
+          "display": "2 œufs"
+        },
+        {
+          "foodId": "20061",
+          "grams": 200,
+          "label": "haricots verts"
+        },
+        {
+          "foodId": "4008",
+          "grams": 300,
+          "label": "pommes de terre",
+          "display": "3 pommes de terre"
+        },
+        {
+          "foodId": "20276",
+          "grams": 200,
+          "label": "tomates",
+          "display": "2 tomates"
+        },
+        {
+          "foodId": "13186",
+          "grams": 30,
+          "label": "olives noires"
+        },
+        {
+          "foodId": "17270",
+          "grams": 15,
+          "label": "huile d'olive",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "11091",
+          "grams": 10,
+          "label": "vinaigre",
+          "display": "1 c. à soupe"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Fais cuire les pommes de terre dans l’eau bouillante.",
+          "timerMinutes": 20
+        },
+        {
+          "text": "Ajoute les haricots verts et les œufs dans la même eau pour les dernières minutes.",
+          "timerMinutes": 9
+        },
+        {
+          "text": "Refroidis le tout, coupe les pommes de terre, les tomates et les œufs."
+        },
+        {
+          "text": "Assemble avec le thon et les olives, arrose d'huile et de vinaigre."
+        }
+      ],
+      "equipment": [
+        "casserole",
+        "saladier"
+      ]
+    },
+    {
+      "id": "pates-pesto-brocoli",
+      "title": "Pâtes complètes au pesto et brocoli",
+      "minutes": 20,
+      "servings": 4,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "laitier",
+      "ingredients": [
+        {
+          "foodId": "9870",
+          "grams": 320,
+          "label": "pâtes complètes"
+        },
+        {
+          "foodId": "20057",
+          "grams": 400,
+          "label": "brocoli",
+          "display": "1 brocoli"
+        },
+        {
+          "foodId": "11179",
+          "grams": 80,
+          "label": "pesto",
+          "display": "4 c. à soupe"
+        },
+        {
+          "foodId": "12120",
+          "grams": 30,
+          "label": "parmesan"
+        },
+        {
+          "foodId": "20172",
+          "grams": 200,
+          "label": "tomates cerises"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Fais cuire les pâtes. Ajoute les fleurettes de brocoli dans l'eau pour les dernières minutes.",
+          "timerMinutes": 10
+        },
+        {
+          "text": "Égoutte en gardant un fond d'eau de cuisson."
+        },
+        {
+          "text": "Mélange avec le pesto et un peu d'eau de cuisson, ajoute les tomates cerises coupées en deux et le parmesan."
+        }
+      ],
+      "equipment": [
+        "casserole"
+      ]
+    },
+    {
+      "id": "cabillaud-puree-carottes",
+      "title": "Cabillaud, purée carottes et cumin",
+      "minutes": 35,
+      "servings": 2,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "poisson",
+      "ingredients": [
+        {
+          "foodId": "26043",
+          "grams": 300,
+          "label": "dos de cabillaud",
+          "display": "2 dos"
+        },
+        {
+          "foodId": "20009",
+          "grams": 400,
+          "label": "carottes",
+          "display": "5 carottes"
+        },
+        {
+          "foodId": "4008",
+          "grams": 400,
+          "label": "pommes de terre",
+          "display": "4 pommes de terre"
+        },
+        {
+          "foodId": "16400",
+          "grams": 10,
+          "label": "beurre"
+        },
+        {
+          "foodId": "19041",
+          "grams": 50,
+          "label": "lait",
+          "display": "5 cl"
+        },
+        {
+          "foodId": "11042",
+          "grams": 2,
+          "label": "cumin"
+        },
+        {
+          "foodId": "13009",
+          "grams": 20,
+          "label": "citron",
+          "display": "½ citron"
+        },
+        {
+          "foodId": "17270",
+          "grams": 10,
+          "label": "huile d'olive",
+          "display": "1 c. à soupe"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Fais cuire les carottes et les pommes de terre en morceaux dans l'eau.",
+          "timerMinutes": 20
+        },
+        {
+          "text": "Écrase-les avec le beurre, le lait et le cumin."
+        },
+        {
+          "text": "Fais cuire le cabillaud à la poêle dans l'huile, côté peau d'abord.",
+          "timerMinutes": 7
+        },
+        {
+          "text": "Sers avec la purée et un trait de citron."
+        }
+      ],
+      "equipment": [
+        "casserole",
+        "poele"
+      ]
+    },
+    {
+      "id": "wraps-poulet-crudites",
+      "title": "Wraps poulet, crudités et sauce yaourt",
+      "minutes": 20,
+      "servings": 2,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "volaille",
+      "clay": "blanc-de-poulet",
+      "ingredients": [
+        {
+          "foodId": "7815",
+          "grams": 120,
+          "label": "tortillas de blé",
+          "display": "2 grandes tortillas"
+        },
+        {
+          "foodId": "36017",
+          "grams": 240,
+          "label": "filets de poulet",
+          "display": "2 filets"
+        },
+        {
+          "foodId": "20031",
+          "grams": 60,
+          "label": "salade"
+        },
+        {
+          "foodId": "20276",
+          "grams": 150,
+          "label": "tomate",
+          "display": "1 tomate"
+        },
+        {
+          "foodId": "13004",
+          "grams": 80,
+          "label": "avocat",
+          "display": "½ avocat"
+        },
+        {
+          "foodId": "19593",
+          "grams": 60,
+          "label": "yaourt nature",
+          "display": "½ pot"
+        },
+        {
+          "foodId": "11049",
+          "grams": 2,
+          "label": "paprika"
+        },
+        {
+          "foodId": "17270",
+          "grams": 5,
+          "label": "huile",
+          "display": "1 c. à café"
+        },
+        {
+          "foodId": "13009",
+          "grams": 10,
+          "label": "jus de citron"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Coupe le poulet en lanières, saupoudre de paprika et fais-le dorer dans l'huile.",
+          "timerMinutes": 7
+        },
+        {
+          "text": "Mélange le yaourt avec le citron pour la sauce."
+        },
+        {
+          "text": "Garnis les tortillas de salade, tomate, avocat, poulet et sauce, puis roule-les bien serrées."
+        }
+      ],
+      "equipment": [
+        "poele"
+      ]
+    },
+    {
+      "id": "shakshuka",
+      "title": "Shakshuka aux poivrons",
+      "minutes": 30,
+      "servings": 2,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "oeuf",
+      "clay": "poele",
+      "ingredients": [
+        {
+          "foodId": "22000",
+          "grams": 200,
+          "label": "œufs",
+          "display": "4 œufs"
+        },
+        {
+          "foodId": "20137",
+          "grams": 400,
+          "label": "tomates pelées",
+          "display": "1 boîte"
+        },
+        {
+          "foodId": "20087",
+          "grams": 150,
+          "label": "poivron rouge",
+          "display": "1 poivron"
+        },
+        {
+          "foodId": "20034",
+          "grams": 80,
+          "label": "oignon",
+          "display": "1 petit oignon"
+        },
+        {
+          "foodId": "11000",
+          "grams": 5,
+          "label": "ail",
+          "display": "1 gousse"
+        },
+        {
+          "foodId": "11042",
+          "grams": 2,
+          "label": "cumin"
+        },
+        {
+          "foodId": "11049",
+          "grams": 2,
+          "label": "paprika"
+        },
+        {
+          "foodId": "17270",
+          "grams": 10,
+          "label": "huile d'olive",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "7110",
+          "grams": 100,
+          "label": "pain complet"
+        },
+        {
+          "foodId": "11094",
+          "grams": 5,
+          "label": "coriandre"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Fais fondre l'oignon et le poivron émincés dans l'huile avec l'ail et les épices.",
+          "timerMinutes": 8
+        },
+        {
+          "text": "Ajoute les tomates et laisse réduire.",
+          "timerMinutes": 10
+        },
+        {
+          "text": "Creuse 4 puits dans la sauce, casse un œuf dans chacun, couvre et laisse cuire jusqu’à ce que les blancs soient pris.",
+          "timerMinutes": 6
+        },
+        {
+          "text": "Parsème de coriandre et sers avec le pain."
+        }
+      ],
+      "equipment": [
+        "poele"
+      ]
+    },
+    {
+      "id": "risotto-champignons-petits-pois",
+      "title": "Risotto champignons et petits pois",
+      "minutes": 35,
+      "servings": 4,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "laitier",
+      "ingredients": [
+        {
+          "foodId": "9100",
+          "grams": 300,
+          "label": "riz rond"
+        },
+        {
+          "foodId": "20056",
+          "grams": 400,
+          "label": "champignons de Paris"
+        },
+        {
+          "foodId": "20084",
+          "grams": 200,
+          "label": "petits pois"
+        },
+        {
+          "foodId": "20034",
+          "grams": 100,
+          "label": "oignon",
+          "display": "1 oignon"
+        },
+        {
+          "foodId": "25948",
+          "grams": 1000,
+          "label": "bouillon de légumes chaud",
+          "display": "1 litre"
+        },
+        {
+          "foodId": "12120",
+          "grams": 40,
+          "label": "parmesan"
+        },
+        {
+          "foodId": "17270",
+          "grams": 15,
+          "label": "huile d'olive",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "16400",
+          "grams": 10,
+          "label": "beurre"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Fais revenir l'oignon dans l'huile, puis les champignons émincés.",
+          "timerMinutes": 5
+        },
+        {
+          "text": "Ajoute le riz et remue jusqu’à ce qu’il devienne translucide.",
+          "timerMinutes": 2
+        },
+        {
+          "text": "Verse le bouillon louche par louche en remuant, en attendant qu’il soit absorbé à chaque fois.",
+          "timerMinutes": 18
+        },
+        {
+          "text": "Ajoute les petits pois pour les dernières minutes, puis le beurre et le parmesan hors du feu."
+        }
+      ],
+      "equipment": [
+        "cocotte"
+      ]
+    },
+    {
+      "id": "gratin-chou-fleur-jambon",
+      "title": "Gratin de chou-fleur et jambon",
+      "minutes": 50,
+      "servings": 4,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "porc",
+      "clay": "four",
+      "ingredients": [
+        {
+          "foodId": "20016",
+          "grams": 1000,
+          "label": "chou-fleur",
+          "display": "1 chou-fleur"
+        },
+        {
+          "foodId": "4008",
+          "grams": 600,
+          "label": "pommes de terre",
+          "display": "6 pommes de terre"
+        },
+        {
+          "foodId": "28900",
+          "grams": 200,
+          "label": "jambon blanc",
+          "display": "4 tranches"
+        },
+        {
+          "foodId": "19041",
+          "grams": 400,
+          "label": "lait demi-écrémé",
+          "display": "40 cl"
+        },
+        {
+          "foodId": "9510",
+          "grams": 30,
+          "label": "fécule de maïs",
+          "display": "2 c. à soupe"
+        },
+        {
+          "foodId": "12118",
+          "grams": 80,
+          "label": "emmental râpé"
+        },
+        {
+          "foodId": "16400",
+          "grams": 20,
+          "label": "beurre"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Fais cuire le chou-fleur en fleurettes et les pommes de terre en rondelles dans l'eau.",
+          "timerMinutes": 12
+        },
+        {
+          "text": "Délaye la fécule dans un peu de lait froid, ajoute le reste du lait et le beurre, épaissis à feu doux en remuant.",
+          "timerMinutes": 5
+        },
+        {
+          "text": "Préchauffe le four à 200 °C. Dispose les légumes et le jambon en morceaux dans le plat, nappe de sauce et parsème d'emmental."
+        },
+        {
+          "text": "Fais gratiner.",
+          "timerMinutes": 20
+        }
+      ],
+      "equipment": [
+        "casserole",
+        "plat-a-four",
+        "four"
+      ]
+    },
+    {
+      "id": "filet-mignon-moutarde",
+      "title": "Filet mignon à la moutarde",
+      "minutes": 40,
+      "servings": 4,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "porc",
+      "clay": "cocotte",
+      "ingredients": [
+        {
+          "foodId": "28204",
+          "grams": 600,
+          "label": "filet mignon de porc"
+        },
+        {
+          "foodId": "11013",
+          "grams": 30,
+          "label": "moutarde",
+          "display": "2 c. à soupe"
+        },
+        {
+          "foodId": "19436",
+          "grams": 150,
+          "label": "crème légère",
+          "display": "15 cl"
+        },
+        {
+          "foodId": "20034",
+          "grams": 100,
+          "label": "oignon",
+          "display": "1 oignon"
+        },
+        {
+          "foodId": "17270",
+          "grams": 10,
+          "label": "huile",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "20061",
+          "grams": 600,
+          "label": "haricots verts"
+        },
+        {
+          "foodId": "4008",
+          "grams": 600,
+          "label": "pommes de terre",
+          "display": "6 pommes de terre"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Fais dorer le filet mignon sur toutes ses faces dans l'huile.",
+          "timerMinutes": 6
+        },
+        {
+          "text": "Ajoute l'oignon émincé et un verre d'eau, couvre et laisse cuire à feu doux.",
+          "timerMinutes": 20
+        },
+        {
+          "text": "Pendant ce temps, fais cuire les pommes de terre et les haricots verts à la vapeur.",
+          "timerMinutes": 20
+        },
+        {
+          "text": "Retire la viande, ajoute la moutarde et la crème dans la cocotte, laisse épaissir.",
+          "timerMinutes": 3
+        },
+        {
+          "text": "Tranche le filet et sers nappé de sauce."
+        }
+      ],
+      "equipment": [
+        "cocotte",
+        "casserole"
+      ]
+    },
+    {
+      "id": "bavette-echalotes",
+      "title": "Bavette aux échalotes",
+      "minutes": 30,
+      "servings": 2,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "boeuf",
+      "clay": "steak",
+      "ingredients": [
+        {
+          "foodId": "6212",
+          "grams": 260,
+          "label": "bavette",
+          "display": "2 morceaux"
+        },
+        {
+          "foodId": "20097",
+          "grams": 60,
+          "label": "échalotes",
+          "display": "2 échalotes"
+        },
+        {
+          "foodId": "11091",
+          "grams": 10,
+          "label": "vinaigre balsamique",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "17270",
+          "grams": 10,
+          "label": "huile",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "20061",
+          "grams": 300,
+          "label": "haricots verts"
+        },
+        {
+          "foodId": "4008",
+          "grams": 300,
+          "label": "pommes de terre",
+          "display": "3 pommes de terre"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Fais cuire les pommes de terre et les haricots verts à la vapeur.",
+          "timerMinutes": 20
+        },
+        {
+          "text": "Saisis la bavette dans l'huile très chaude, puis laisse-la reposer sous une feuille d'aluminium.",
+          "timerMinutes": 4
+        },
+        {
+          "text": "Dans la même poêle, fais fondre les échalotes émincées et déglace au vinaigre.",
+          "timerMinutes": 3
+        },
+        {
+          "text": "Sers la viande tranchée avec les échalotes et les légumes."
+        }
+      ],
+      "equipment": [
+        "poele",
+        "casserole"
+      ]
+    },
+    {
+      "id": "tofu-saute-sesame",
+      "title": "Tofu sauté au sésame et brocoli",
+      "minutes": 25,
+      "servings": 2,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "tofu",
+      "ingredients": [
+        {
+          "foodId": "20904",
+          "grams": 300,
+          "label": "tofu ferme"
+        },
+        {
+          "foodId": "20057",
+          "grams": 200,
+          "label": "brocoli"
+        },
+        {
+          "foodId": "20056",
+          "grams": 150,
+          "label": "champignons"
+        },
+        {
+          "foodId": "11104",
+          "grams": 30,
+          "label": "sauce soja",
+          "display": "2 c. à soupe"
+        },
+        {
+          "foodId": "11074",
+          "grams": 10,
+          "label": "gingembre frais"
+        },
+        {
+          "foodId": "11000",
+          "grams": 5,
+          "label": "ail",
+          "display": "1 gousse"
+        },
+        {
+          "foodId": "17400",
+          "grams": 10,
+          "label": "huile de sésame",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "9102",
+          "grams": 140,
+          "label": "riz complet"
+        },
+        {
+          "foodId": "9510",
+          "grams": 5,
+          "label": "fécule de maïs",
+          "display": "1 c. à café"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Mets le riz complet à cuire.",
+          "timerMinutes": 30
+        },
+        {
+          "text": "Coupe le tofu en cubes, enrobe-les de fécule et fais-les dorer dans l’huile.",
+          "timerMinutes": 8
+        },
+        {
+          "text": "Ajoute le brocoli, les champignons, l’ail et le gingembre. Fais sauter.",
+          "timerMinutes": 5
+        },
+        {
+          "text": "Verse la sauce soja et un peu d'eau, mélange et sers avec le riz."
+        }
+      ],
+      "equipment": [
+        "poele",
+        "casserole"
+      ]
+    },
+    {
+      "id": "lentilles-vertes-carottes",
+      "title": "Lentilles vertes mijotées aux carottes",
+      "minutes": 40,
+      "servings": 4,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "legumineuses",
+      "clay": "cocotte",
+      "ingredients": [
+        {
+          "foodId": "20585",
+          "grams": 300,
+          "label": "lentilles vertes"
+        },
+        {
+          "foodId": "20009",
+          "grams": 300,
+          "label": "carottes",
+          "display": "4 carottes"
+        },
+        {
+          "foodId": "20034",
+          "grams": 100,
+          "label": "oignon",
+          "display": "1 oignon"
+        },
+        {
+          "foodId": "11000",
+          "grams": 10,
+          "label": "ail",
+          "display": "2 gousses"
+        },
+        {
+          "foodId": "25948",
+          "grams": 900,
+          "label": "bouillon de légumes",
+          "display": "90 cl"
+        },
+        {
+          "foodId": "17270",
+          "grams": 15,
+          "label": "huile d'olive",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "11013",
+          "grams": 10,
+          "label": "moutarde",
+          "display": "1 c. à café"
+        },
+        {
+          "foodId": "19860",
+          "grams": 200,
+          "label": "yaourt à la grecque"
+        },
+        {
+          "foodId": "7110",
+          "grams": 160,
+          "label": "pain complet"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Fais revenir l'oignon, les carottes en rondelles et l'ail dans l'huile.",
+          "timerMinutes": 5
+        },
+        {
+          "text": "Ajoute les lentilles rincées et le bouillon. Laisse mijoter à couvert.",
+          "timerMinutes": 30
+        },
+        {
+          "text": "Mélange le yaourt avec la moutarde."
+        },
+        {
+          "text": "Sers les lentilles avec une cuillerée de yaourt moutardé et le pain."
+        }
+      ],
+      "equipment": [
+        "cocotte"
+      ]
+    },
+    {
+      "id": "crevettes-coco-citron-vert",
+      "title": "Crevettes au lait de coco et citron vert",
+      "minutes": 25,
+      "servings": 2,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "poisson",
+      "ingredients": [
+        {
+          "foodId": "10007",
+          "grams": 250,
+          "label": "crevettes décortiquées"
+        },
+        {
+          "foodId": "18041",
+          "grams": 120,
+          "label": "lait de coco",
+          "display": "12 cl"
+        },
+        {
+          "foodId": "13067",
+          "grams": 30,
+          "label": "citron vert",
+          "display": "1 citron vert"
+        },
+        {
+          "foodId": "20087",
+          "grams": 150,
+          "label": "poivron rouge",
+          "display": "1 poivron"
+        },
+        {
+          "foodId": "11000",
+          "grams": 5,
+          "label": "ail",
+          "display": "1 gousse"
+        },
+        {
+          "foodId": "11074",
+          "grams": 5,
+          "label": "gingembre frais"
+        },
+        {
+          "foodId": "17270",
+          "grams": 5,
+          "label": "huile",
+          "display": "1 c. à café"
+        },
+        {
+          "foodId": "9100",
+          "grams": 140,
+          "label": "riz basmati"
+        },
+        {
+          "foodId": "11094",
+          "grams": 5,
+          "label": "coriandre"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Mets le riz à cuire.",
+          "timerMinutes": 12
+        },
+        {
+          "text": "Fais revenir le poivron en lanières dans l'huile avec l'ail et le gingembre.",
+          "timerMinutes": 5
+        },
+        {
+          "text": "Ajoute le lait de coco et les crevettes, laisse frémir.",
+          "timerMinutes": 4
+        },
+        {
+          "text": "Hors du feu, ajoute le jus et le zeste du citron vert, la coriandre, et sers avec le riz."
+        }
+      ],
+      "equipment": [
+        "poele",
+        "casserole"
+      ]
+    },
+    {
+      "id": "taboule-boulgour-feta",
+      "title": "Taboulé de boulgour, pois chiches et feta",
+      "minutes": 20,
+      "servings": 4,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "laitier",
+      "clay": "tomate",
+      "ingredients": [
+        {
+          "foodId": "9690",
+          "grams": 240,
+          "label": "boulgour"
+        },
+        {
+          "foodId": "20532",
+          "grams": 240,
+          "label": "pois chiches cuits",
+          "display": "1 boîte égouttée"
+        },
+        {
+          "foodId": "20019",
+          "grams": 300,
+          "label": "concombre",
+          "display": "1 concombre"
+        },
+        {
+          "foodId": "20276",
+          "grams": 300,
+          "label": "tomates",
+          "display": "3 tomates"
+        },
+        {
+          "foodId": "12066",
+          "grams": 150,
+          "label": "feta"
+        },
+        {
+          "foodId": "17270",
+          "grams": 30,
+          "label": "huile d'olive",
+          "display": "2 c. à soupe"
+        },
+        {
+          "foodId": "13009",
+          "grams": 40,
+          "label": "jus de citron",
+          "display": "1 citron"
+        },
+        {
+          "foodId": "11080",
+          "grams": 15,
+          "label": "menthe et persil"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Verse de l'eau bouillante sur le boulgour à hauteur, couvre et laisse gonfler.",
+          "timerMinutes": 10
+        },
+        {
+          "text": "Coupe le concombre et les tomates en petits dés, cisèle les herbes."
+        },
+        {
+          "text": "Égrène le boulgour à la fourchette, ajoute les légumes, les pois chiches, l'huile et le citron."
+        },
+        {
+          "text": "Émiette la feta dessus. Se garde 2 jours au frais."
+        }
+      ],
+      "equipment": [
+        "saladier"
+      ]
+    },
+    {
+      "id": "poulet-roti-legumes-automne",
+      "title": "Poulet rôti et légumes d'automne",
+      "minutes": 50,
+      "servings": 4,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "volaille",
+      "clay": "cuisse-de-poulet",
+      "ingredients": [
+        {
+          "foodId": "36017",
+          "grams": 600,
+          "label": "filets de poulet"
+        },
+        {
+          "foodId": "20138",
+          "grams": 600,
+          "label": "courge butternut"
+        },
+        {
+          "foodId": "20009",
+          "grams": 300,
+          "label": "carottes",
+          "display": "4 carottes"
+        },
+        {
+          "foodId": "20238",
+          "grams": 200,
+          "label": "oignons rouges",
+          "display": "2 oignons"
+        },
+        {
+          "foodId": "4008",
+          "grams": 600,
+          "label": "pommes de terre",
+          "display": "6 pommes de terre"
+        },
+        {
+          "foodId": "17270",
+          "grams": 30,
+          "label": "huile d'olive",
+          "display": "2 c. à soupe"
+        },
+        {
+          "foodId": "11060",
+          "grams": 3,
+          "label": "herbes de Provence"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Préchauffe le four à 200 °C. Coupe les légumes en gros morceaux."
+        },
+        {
+          "text": "Mélange-les dans le plat avec l'huile et les herbes, enfourne.",
+          "timerMinutes": 20
+        },
+        {
+          "text": "Ajoute le poulet en morceaux sur les légumes et poursuis la cuisson.",
+          "timerMinutes": 20
+        },
+        {
+          "text": "Vérifie que le poulet est bien cuit à cœur avant de servir."
+        }
+      ],
+      "equipment": [
+        "four",
+        "plat-a-four"
+      ]
+    },
+    {
+      "id": "quiche-sans-pate-poireaux-chevre",
+      "title": "Quiche sans pâte poireaux et chèvre",
+      "minutes": 45,
+      "servings": 4,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "oeuf",
+      "clay": "four",
+      "ingredients": [
+        {
+          "foodId": "22000",
+          "grams": 300,
+          "label": "œufs",
+          "display": "6 œufs"
+        },
+        {
+          "foodId": "19041",
+          "grams": 300,
+          "label": "lait demi-écrémé",
+          "display": "30 cl"
+        },
+        {
+          "foodId": "20039",
+          "grams": 600,
+          "label": "poireaux",
+          "display": "3 poireaux"
+        },
+        {
+          "foodId": "12814",
+          "grams": 120,
+          "label": "fromage de chèvre"
+        },
+        {
+          "foodId": "12118",
+          "grams": 40,
+          "label": "emmental râpé"
+        },
+        {
+          "foodId": "17270",
+          "grams": 10,
+          "label": "huile",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "20031",
+          "grams": 200,
+          "label": "salade verte"
+        },
+        {
+          "foodId": "7110",
+          "grams": 160,
+          "label": "pain complet"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Émince les poireaux et fais-les fondre dans l'huile.",
+          "timerMinutes": 10
+        },
+        {
+          "text": "Préchauffe le four à 180 °C. Bats les œufs avec le lait."
+        },
+        {
+          "text": "Étale les poireaux dans le plat, verse l'appareil, ajoute le chèvre en rondelles et l'emmental."
+        },
+        {
+          "text": "Enfourne jusqu’à ce que ce soit doré et pris.",
+          "timerMinutes": 30
+        },
+        {
+          "text": "Sers avec la salade et le pain."
+        }
+      ],
+      "equipment": [
+        "poele",
+        "plat-a-four",
+        "four"
+      ]
+    },
+    {
+      "id": "minestrone",
+      "title": "Minestrone aux haricots blancs",
+      "minutes": 40,
+      "servings": 4,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "legumineuses",
+      "clay": "casserole",
+      "ingredients": [
+        {
+          "foodId": "20511",
+          "grams": 250,
+          "label": "haricots blancs cuits",
+          "display": "1 boîte égouttée"
+        },
+        {
+          "foodId": "9810",
+          "grams": 200,
+          "label": "petites pâtes"
+        },
+        {
+          "foodId": "20020",
+          "grams": 300,
+          "label": "courgettes",
+          "display": "2 courgettes"
+        },
+        {
+          "foodId": "20009",
+          "grams": 200,
+          "label": "carottes",
+          "display": "2 carottes"
+        },
+        {
+          "foodId": "20137",
+          "grams": 400,
+          "label": "tomates pelées",
+          "display": "1 boîte"
+        },
+        {
+          "foodId": "20039",
+          "grams": 200,
+          "label": "poireau",
+          "display": "1 poireau"
+        },
+        {
+          "foodId": "25948",
+          "grams": 1200,
+          "label": "bouillon de légumes",
+          "display": "1,2 litre"
+        },
+        {
+          "foodId": "17270",
+          "grams": 15,
+          "label": "huile d'olive",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "12120",
+          "grams": 60,
+          "label": "parmesan"
+        },
+        {
+          "foodId": "11000",
+          "grams": 5,
+          "label": "ail",
+          "display": "1 gousse"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Fais revenir le poireau, les carottes et l'ail dans l'huile.",
+          "timerMinutes": 5
+        },
+        {
+          "text": "Ajoute les courgettes, les tomates et le bouillon. Laisse mijoter.",
+          "timerMinutes": 20
+        },
+        {
+          "text": "Ajoute les pâtes et les haricots, et poursuis la cuisson.",
+          "timerMinutes": 10
+        },
+        {
+          "text": "Sers avec le parmesan râpé."
+        }
+      ],
+      "equipment": [
+        "cocotte"
+      ]
+    },
+    {
+      "id": "boulettes-boeuf-tomate-semoule",
+      "title": "Boulettes de bœuf, sauce tomate et semoule",
+      "minutes": 40,
+      "servings": 4,
+      "slots": [
+        "lunch",
+        "dinner"
+      ],
+      "protein": "boeuf",
+      "clay": "steak-hache",
+      "ingredients": [
+        {
+          "foodId": "6250",
+          "grams": 500,
+          "label": "bœuf haché 5 %"
+        },
+        {
+          "foodId": "22000",
+          "grams": 50,
+          "label": "œuf",
+          "display": "1 œuf"
+        },
+        {
+          "foodId": "20034",
+          "grams": 80,
+          "label": "oignon",
+          "display": "1 petit oignon"
+        },
+        {
+          "foodId": "11042",
+          "grams": 3,
+          "label": "cumin"
+        },
+        {
+          "foodId": "20137",
+          "grams": 600,
+          "label": "tomates pelées",
+          "display": "1 grande boîte"
+        },
+        {
+          "foodId": "17270",
+          "grams": 15,
+          "label": "huile d'olive",
+          "display": "1 c. à soupe"
+        },
+        {
+          "foodId": "9610",
+          "grams": 240,
+          "label": "semoule"
+        },
+        {
+          "foodId": "11080",
+          "grams": 10,
+          "label": "coriandre ou persil"
+        }
+      ],
+      "steps": [
+        {
+          "text": "Mélange le bœuf, l'œuf, l'oignon râpé et le cumin. Forme une vingtaine de boulettes."
+        },
+        {
+          "text": "Fais-les dorer dans l'huile.",
+          "timerMinutes": 6
+        },
+        {
+          "text": "Ajoute les tomates et laisse mijoter.",
+          "timerMinutes": 15
+        },
+        {
+          "text": "Verse le même volume d'eau bouillante sur la semoule, couvre et laisse gonfler.",
+          "timerMinutes": 5
+        },
+        {
+          "text": "Sers les boulettes sur la semoule, parsemées d’herbes."
+        }
+      ],
+      "equipment": [
+        "poele",
+        "casserole"
+      ]
+    }
+  ]
+}
