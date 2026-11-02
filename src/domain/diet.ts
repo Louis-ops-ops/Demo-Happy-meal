@@ -28,9 +28,9 @@ export type RecipeForDiet = {
   ingredientTexts: readonly string[]
 }
 
-/** True when an ingredient text contains the exclusion as whole words (tomate matches "tomates pelées", ail not "aile"). */
-function matchesExclusion(texts: readonly string[], exclusion: string): boolean {
-  const key = exclusionKey(exclusion)
+/** True when an ingredient text contains the keyword as whole words (tomate matches "tomates pelées", ail not "aile"). */
+export function matchesIngredient(texts: readonly string[], keyword: string): boolean {
+  const key = exclusionKey(keyword)
   if (!key) return false
   return texts.some((text) => ` ${exclusionKey(text)} `.includes(` ${key} `))
 }
@@ -43,5 +43,5 @@ export function isRecipeAllowed(
 ): boolean {
   const forbidden = new Set<string>(diets.flatMap((diet) => DIETS[diet]))
   if (recipe.tags.some((tag) => forbidden.has(tag))) return false
-  return !exclusions.some((exclusion) => matchesExclusion(recipe.ingredientTexts, exclusion))
+  return !exclusions.some((exclusion) => matchesIngredient(recipe.ingredientTexts, exclusion))
 }

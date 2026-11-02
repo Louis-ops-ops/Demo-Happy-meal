@@ -26,3 +26,6 @@ export type MacroTargets = {
   fatG: number
   carbsG: number
 }
+
+/** Meal slots of a day. */
+export type MealSlot = 'breakfast' | 'lunch' | 'snack' | 'dinner'
