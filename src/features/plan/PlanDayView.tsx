@@ -17,12 +17,13 @@ export type PlanDayViewProps = {
   day: number
   onDay: (day: number) => void
   onSwap: (day: number, index: number) => void
+  onOpen: (recipeId: string, day: number, index: number) => void
   /** Arrow keys are off while a panel is open. */
   keysEnabled: boolean
 }
 
 /** Mobile and tablet: a day selector, the day total against the target, and the day's meals. */
-export function PlanDayView({ state, day, onDay, onSwap, keysEnabled }: PlanDayViewProps) {
+export function PlanDayView({ state, day, onDay, onSwap, onOpen, keysEnabled }: PlanDayViewProps) {
   const { plan, meals, data } = state
   const total = dayTotal(meals, data.recipes, day)
   const date = addDays(plan.startDate, day)
@@ -99,6 +100,7 @@ export function PlanDayView({ state, day, onDay, onSwap, keysEnabled }: PlanDayV
                 title={recipe.title}
                 meta={mealMeta(recipe, meal.portions)}
                 clay={recipeClay(recipe)}
+                onOpen={() => onOpen(recipe.id, meal.day, meal.index)}
                 action={
                   <IconButton
                     icon="refresh-cw"

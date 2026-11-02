@@ -15,13 +15,14 @@ export type SwapPanelProps = {
   day: number
   index: number
   onPick: (recipeId: string) => void
+  onOpenRecipe: () => void
   onClose: () => void
 }
 
 const MAX_SHOWN = 5
 
 /** Alternatives for one meal, in a side panel (full screen on mobile). */
-export function SwapPanel({ state, day, index, onPick, onClose }: SwapPanelProps) {
+export function SwapPanel({ state, day, index, onPick, onOpenRecipe, onClose }: SwapPanelProps) {
   const { plan, meals, input, allowed, data } = state
   const meal = meals.find((m) => m.day === day && m.index === index)
   const current = meal ? data.recipes.get(meal.recipeId) : undefined
@@ -49,6 +50,9 @@ export function SwapPanel({ state, day, index, onPick, onClose }: SwapPanelProps
           <div className="flex min-w-0 flex-col gap-01">
             <p className="text-label text-text">{current.title}</p>
             <p className="text-body-sm text-text-muted">{mealMeta(current, meal.portions)}</p>
+            <button type="button" onClick={onOpenRecipe} className="min-h-11 w-fit text-left text-label text-focus-text">
+              Voir la recette
+            </button>
           </div>
         </div>
       </section>

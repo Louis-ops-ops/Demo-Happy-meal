@@ -7,6 +7,7 @@ import { db } from '../data/db'
 import { onboardingPath } from '../features/onboarding/paths'
 import { OnboardingRoutes } from '../features/onboarding/OnboardingRoutes'
 import { CoursesPage } from '../features/courses/CoursesPage'
+import { RecipePage } from '../features/recipe/RecipePage'
 import { PlanPage } from '../features/plan/PlanPage'
 import { PlanSetupPage } from '../features/plan/PlanSetupPage'
 import { TodayPage } from '../features/today/TodayPage'
@@ -70,6 +71,9 @@ export function AppRoutes() {
           <Route path="profil" element={<PlaceholderPage title="Profil" step={8} />} />
         </Route>
         <Route path="_kit" element={<KitPage />} />
+      </Route>
+      <Route element={<RequireProfile />}>
+        <Route path="recette/:recipeId" element={<RecipePage />} />
       </Route>
       <Route path="*" element={<Navigate to={appPath()} replace />} />
     </Routes>

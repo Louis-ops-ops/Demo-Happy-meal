@@ -13,10 +13,12 @@ export type MealItemProps = {
   portions: number
   eaten: boolean
   onEaten: (eaten: boolean) => void
+  /** Opens the recipe page. */
+  onOpen: () => void
 }
 
 /** A meal of today's plan: one dish to cook as planned, ticked once eaten. */
-export function MealItem({ slot, recipe, portions, eaten, onEaten }: MealItemProps) {
+export function MealItem({ slot, recipe, portions, eaten, onEaten, onOpen }: MealItemProps) {
   return (
     <li className="flex flex-col gap-02">
       <p className="text-overline-caps text-text-muted">{SLOT_LABELS[slot]}</p>
@@ -24,6 +26,7 @@ export function MealItem({ slot, recipe, portions, eaten, onEaten }: MealItemPro
         title={recipe.title}
         meta={mealMeta(recipe, portions)}
         clay={recipeClay(recipe)}
+        onOpen={onOpen}
         action={
           <button
             type="button"

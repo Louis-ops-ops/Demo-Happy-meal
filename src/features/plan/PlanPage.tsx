@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Button } from '../../components/Button'
 import { Card } from '../../components/Card'
 import { ClayIcon } from '../../components/ClayIcon'
-import { activatePlan, saveDayMeals } from '../../data/db'
+import { activatePlan, planKey, saveDayMeals } from '../../data/db'
 import { applySwap } from '../../domain/plan'
 import { appPath } from '../../platform'
 import { formatRange } from './labels'
@@ -22,6 +22,10 @@ export function PlanPage() {
   const [swapping, setSwapping] = useState<{ day: number; index: number } | null>(null)
   const [notice, setNotice] = useState('')
   const goSetup = () => navigate(appPath(SETUP))
+  const openRecipe = (recipeId: string, day: number, index: number) =>
+    state.status === 'ready' && navigate(appPath(`recette/${recipeId}?repas=${planKey(state.plan.id, day, index)}`))
+  const swappedRecipeId = () =>
+    (state.status === 'ready' && swapping && state.meals.find((m) => m.day === swapping.day && m.index === swapping.index)?.recipeId) || ''
   const closeSwap = useCallback(() => setSwapping(null), [])
 
   if (state.status === 'loading') return <p className="text-body text-text-muted">Chargement de ton plan…</p>
@@ -107,10 +111,10 @@ export function PlanPage() {
         {notice}
       </p>
 
-      <PlanDayView state={state} day={day} onDay={setDay} onSwap={(d, i) => setSwapping({ day: d, index: i })} keysEnabled={!swapping} />
+      <PlanDayView state={state} day={day} onDay={setDay} onSwap={(d, i) => setSwapping({ day: d, index: i })} onOpen={openRecipe} keysEnabled={!swapping} />
       <PlanGrid state={state} selected={swapping} onSwap={(d, i) => setSwapping({ day: d, index: i })} />
 
-      {swapping && <SwapPanel state={state} day={swapping.day} index={swapping.index} onPick={pick} onClose={closeSwap} />}
+      {swapping && <SwapPanel state={state} day={swapping.day} index={swapping.index} onPick={pick} onOpenRecipe={() => openRecipe(swappedRecipeId(), swapping.day, swapping.index)} onClose={closeSwap} />}
     </section>
   )
 }

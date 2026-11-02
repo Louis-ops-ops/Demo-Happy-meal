@@ -10,10 +10,10 @@ import {
   setPlanMealEaten,
   type JournalEntry,
 } from '../../data/db'
-import { recipeEntryNutrients } from '../../domain/journal'
 import { appPath } from '../../platform'
 import { formatInt } from '../format'
 import { SLOT_LABELS, formatDayLong } from '../plan/labels'
+import { planMealEntry } from './entries'
 import { DaySummary } from './DaySummary'
 import { MealItem } from './MealItem'
 import { QuickAddPanel } from './QuickAddPanel'
@@ -73,21 +73,8 @@ export function TodayPage() {
                     recipe={recipe}
                     portions={meal.portions}
                     eaten={eatenKeys.has(key)}
-                    onEaten={(value) =>
-                      setPlanMealEaten(
-                        {
-                          date: today,
-                          slot: meal.slot,
-                          label: recipe.title,
-                          kind: 'plan',
-                          recipeId: recipe.id,
-                          quantity: meal.portions,
-                          nutrients: recipeEntryNutrients(recipe.nutrition, meal.portions),
-                          planKey: key,
-                        },
-                        value,
-                      )
-                    }
+                    onEaten={(value) => setPlanMealEaten(planMealEntry(meal, recipe, today), value)}
+                    onOpen={() => navigate(appPath(`recette/${recipe.id}?repas=${key}`))}
                   />
                 )
               })}
