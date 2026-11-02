@@ -1,0 +1,112 @@
+/*
+ * Happy meal design tokens. Source of truth: Figma "Design system" page (1:2).
+ * Components never use raw values: they go through these variables
+ * (directly or via the Tailwind theme in index.css).
+ */
+:root {
+  /* Colors: primaries */
+  --darkgreen-p: #2e3a2f;
+  --lightgreen-p: #6b7f5b;
+  --lightbrown-p: #d9c9b2;
+  --orange-p: #c96f4f;
+  --creme-p: #f8f6ee;
+
+  /* Colors: scales */
+  --darkgreen-100: #f9fafa;
+  --darkgreen-200: #e3e8e3;
+  --darkgreen-300: #cfd8cf;
+  --darkgreen-400: #9aac9a;
+  --darkgreen-500: #677d67;
+
+  --lightgreen-100: #f7f8f5;
+  --lightgreen-200: #ecf0e8;
+  --lightgreen-300: #d8e0d2;
+  --lightgreen-400: #b9c7ae;
+  --lightgreen-500: #92a583;
+
+  --orange-100: #fbf5f1;
+  --orange-200: #f6e8de;
+  --orange-300: #ebcfbd;
+  --orange-400: #dfae92;
+  --orange-500: #d18666;
+
+  /* Semantic roles */
+  --color-bg: var(--creme-p);
+  --color-text: var(--darkgreen-p);
+  --color-primary: var(--darkgreen-p);
+  --color-on-primary: var(--creme-p);
+  --color-accent: var(--lightgreen-p);
+  --color-highlight: var(--orange-p);
+  --color-focus: var(--orange-p);
+
+  /* Spacing */
+  --spacing-01: 4px;
+  --spacing-02: 8px;
+  --spacing-03: 12px;
+  --spacing-04: 16px;
+  --spacing-05: 24px;
+  --spacing-06: 32px;
+
+  /* Radius */
+  --radius-01: 12px;
+  --radius-02: 16px;
+  --radius-03: 24px;
+  --radius-04: 999px;
+
+  /* Typography: Lexend */
+  --font-family: 'Lexend', system-ui, sans-serif;
+
+  --display-size: 32px;
+  --display-lh: 38px;
+  --display-weight: 600;
+  --display-ls: -0.64px;
+
+  --title-1-size: 26px;
+  --title-1-lh: 32px;
+  --title-1-weight: 600;
+  --title-1-ls: -0.39px;
+
+  --title-2-size: 21px;
+  --title-2-lh: 28px;
+  --title-2-weight: 600;
+  --title-2-ls: -0.21px;
+
+  --title-3-size: 18px;
+  --title-3-lh: 24px;
+  --title-3-weight: 500;
+  --title-3-ls: 0px;
+
+  --body-lg-size: 17px;
+  --body-lg-lh: 26px;
+  --body-lg-weight: 400;
+  --body-lg-ls: 0px;
+
+  --body-size: 15px;
+  --body-lh: 22px;
+  --body-weight: 400;
+  --body-ls: 0px;
+
+  --body-sm-size: 13px;
+  --body-sm-lh: 18px;
+  --body-sm-weight: 400;
+  --body-sm-ls: 0px;
+
+  --label-size: 15px;
+  --label-lh: 20px;
+  --label-weight: 500;
+  --label-ls: 0.15px;
+
+  --caption-size: 12px;
+  --caption-lh: 16px;
+  --caption-weight: 400;
+  --caption-ls: 0.12px;
+
+  --overline-size: 12px;
+  --overline-lh: 16px;
+  --overline-weight: 400;
+  --overline-ls: 0.48px;
+
+  /* Layout */
+  --container-max: 1280px;
+  --touch-target: 44px;
+}

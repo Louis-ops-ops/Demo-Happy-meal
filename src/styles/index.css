@@ -1,0 +1,140 @@
+@import 'tailwindcss';
+@import './tokens.css';
+
+/* Tailwind theme wired to the tokens: default palette, radii and breakpoints are removed. */
+@theme inline {
+  --color-*: initial;
+  --color-darkgreen-p: var(--darkgreen-p);
+  --color-darkgreen-100: var(--darkgreen-100);
+  --color-darkgreen-200: var(--darkgreen-200);
+  --color-darkgreen-300: var(--darkgreen-300);
+  --color-darkgreen-400: var(--darkgreen-400);
+  --color-darkgreen-500: var(--darkgreen-500);
+  --color-lightgreen-p: var(--lightgreen-p);
+  --color-lightgreen-100: var(--lightgreen-100);
+  --color-lightgreen-200: var(--lightgreen-200);
+  --color-lightgreen-300: var(--lightgreen-300);
+  --color-lightgreen-400: var(--lightgreen-400);
+  --color-lightgreen-500: var(--lightgreen-500);
+  --color-orange-p: var(--orange-p);
+  --color-orange-100: var(--orange-100);
+  --color-orange-200: var(--orange-200);
+  --color-orange-300: var(--orange-300);
+  --color-orange-400: var(--orange-400);
+  --color-orange-500: var(--orange-500);
+  --color-lightbrown-p: var(--lightbrown-p);
+  --color-creme-p: var(--creme-p);
+  --color-bg: var(--color-bg);
+  --color-text: var(--color-text);
+  --color-primary: var(--color-primary);
+  --color-on-primary: var(--color-on-primary);
+  --color-accent: var(--color-accent);
+  --color-highlight: var(--color-highlight);
+  --color-focus: var(--color-focus);
+
+  --spacing-01: var(--spacing-01);
+  --spacing-02: var(--spacing-02);
+  --spacing-03: var(--spacing-03);
+  --spacing-04: var(--spacing-04);
+  --spacing-05: var(--spacing-05);
+  --spacing-06: var(--spacing-06);
+
+  --radius-*: initial;
+  --radius-01: var(--radius-01);
+  --radius-02: var(--radius-02);
+  --radius-03: var(--radius-03);
+  --radius-full: var(--radius-04);
+
+  --font-*: initial;
+  --font-sans: var(--font-family);
+
+  --text-*: initial;
+  --text-display: var(--display-size);
+  --text-display--line-height: var(--display-lh);
+  --text-display--font-weight: var(--display-weight);
+  --text-display--letter-spacing: var(--display-ls);
+  --text-title-1: var(--title-1-size);
+  --text-title-1--line-height: var(--title-1-lh);
+  --text-title-1--font-weight: var(--title-1-weight);
+  --text-title-1--letter-spacing: var(--title-1-ls);
+  --text-title-2: var(--title-2-size);
+  --text-title-2--line-height: var(--title-2-lh);
+  --text-title-2--font-weight: var(--title-2-weight);
+  --text-title-2--letter-spacing: var(--title-2-ls);
+  --text-title-3: var(--title-3-size);
+  --text-title-3--line-height: var(--title-3-lh);
+  --text-title-3--font-weight: var(--title-3-weight);
+  --text-title-3--letter-spacing: var(--title-3-ls);
+  --text-body-lg: var(--body-lg-size);
+  --text-body-lg--line-height: var(--body-lg-lh);
+  --text-body-lg--font-weight: var(--body-lg-weight);
+  --text-body-lg--letter-spacing: var(--body-lg-ls);
+  --text-body: var(--body-size);
+  --text-body--line-height: var(--body-lh);
+  --text-body--font-weight: var(--body-weight);
+  --text-body--letter-spacing: var(--body-ls);
+  --text-body-sm: var(--body-sm-size);
+  --text-body-sm--line-height: var(--body-sm-lh);
+  --text-body-sm--font-weight: var(--body-sm-weight);
+  --text-body-sm--letter-spacing: var(--body-sm-ls);
+  --text-label: var(--label-size);
+  --text-label--line-height: var(--label-lh);
+  --text-label--font-weight: var(--label-weight);
+  --text-label--letter-spacing: var(--label-ls);
+  --text-caption: var(--caption-size);
+  --text-caption--line-height: var(--caption-lh);
+  --text-caption--font-weight: var(--caption-weight);
+  --text-caption--letter-spacing: var(--caption-ls);
+  --text-overline: var(--overline-size);
+  --text-overline--line-height: var(--overline-lh);
+  --text-overline--font-weight: var(--overline-weight);
+  --text-overline--letter-spacing: var(--overline-ls);
+
+  /* Breakpoints (mobile-first): md tablet, lg desktop, xl large screen */
+  --breakpoint-*: initial;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 90rem;
+
+  --container-app: var(--container-max);
+}
+
+@layer base {
+  html {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-family);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    font-size: var(--body-size);
+    line-height: var(--body-lh);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@utility text-overline-caps {
+  font-size: var(--overline-size);
+  line-height: var(--overline-lh);
+  font-weight: var(--overline-weight);
+  letter-spacing: var(--overline-ls);
+  text-transform: uppercase;
+}
