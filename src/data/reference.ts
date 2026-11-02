@@ -1,7 +1,7 @@
 import { recipeNutritionPerServing } from '../domain/nutrition'
 import type { Nutrients } from '../domain/types'
 import type { Food, FoodsFile, FoodTag, Recipe, RecipesFile } from './schemas'
-import { normalize } from './text'
+import { normalize } from '../domain/text'
 
 /** A recipe with everything the code derives from its ingredients. */
 export type IndexedRecipe = Recipe & {

@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import {
+  computeMaintenance,
   computeTargets,
   dailyDeficit,
   kgPerWeekFromDeficit,
@@ -201,5 +202,44 @@ describe('macroTargets', () => {
     const { proteinG, fatG, carbsG } = macroTargets({ kcal: 1850, weightKg: 70, heightCm: 170 })
     expect(proteinG * 4 + carbsG * 4 + fatG * 9).toBeGreaterThan(1840)
     expect(proteinG * 4 + carbsG * 4 + fatG * 9).toBeLessThan(1860)
+  })
+})
+
+describe('computeMaintenance (goal skipped)', () => {
+  const base = { sex: man.sex, birthDate: man.birthDate, heightCm: man.heightCm, weightKg: man.weightKg, activity: man.activity }
+
+  it('targets the TDEE with default macros', () => {
+    const result = computeMaintenance(base, TODAY)
+    expect(result).toEqual({
+      ok: true,
+      targets: {
+        age: 30,
+        bmr: 1780,
+        tdee: 2759,
+        kcalTarget: 2759,
+        macros: macroTargets({ kcal: 2759, weightKg: 80, heightCm: 180 }),
+        currentBmi: 24.7,
+      },
+    })
+  })
+
+  it('never goes below the sex minimum', () => {
+    const result = computeMaintenance(
+      { ...base, sex: 'female', birthDate: '1956-01-01', weightKg: 45, heightCm: 150, activity: 'sedentary' },
+      TODAY,
+    )
+    expect(result.ok && result.targets.kcalTarget).toBe(1200)
+  })
+
+  it('works for a low BMI, but still refuses minors and invalid input', () => {
+    expect(computeMaintenance({ ...base, weightKg: 50 }, TODAY).ok).toBe(true)
+    expect(computeMaintenance({ ...base, birthDate: '2010-01-01' }, TODAY)).toEqual({
+      ok: false,
+      error: { code: 'underage', minAge: 18 },
+    })
+    expect(computeMaintenance({ ...base, heightCm: 0 }, TODAY)).toEqual({
+      ok: false,
+      error: { code: 'invalid_input', field: 'heightCm' },
+    })
   })
 })

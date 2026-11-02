@@ -40,6 +40,8 @@ export function SegmentedControl<T extends string>({
     >
       {options.map((option, index) => {
         const active = option.value === value
+        // With nothing selected yet, the first option stays reachable with Tab.
+        const focusable = active || (index === 0 && !options.some((o) => o.value === value))
         return (
           <button
             key={option.value}
@@ -49,7 +51,7 @@ export function SegmentedControl<T extends string>({
             type="button"
             role="radio"
             aria-checked={active}
-            tabIndex={active ? 0 : -1}
+            tabIndex={focusable ? 0 : -1}
             onClick={() => onChange(option.value)}
             onKeyDown={(event) => onKeyDown(event, index)}
             className={cn(

@@ -2,6 +2,7 @@ import { useState, type ReactNode } from 'react'
 import { Button } from '../../components/Button'
 import { Card } from '../../components/Card'
 import { CheckRow } from '../../components/CheckRow'
+import { ChoiceCards } from '../../components/ChoiceCard'
 import { Chip } from '../../components/Chip'
 import { clayIds, type ClayId } from '../../components/clay'
 import { ClayIcon } from '../../components/ClayIcon'
@@ -17,6 +18,7 @@ import { RecipeCard } from '../../components/RecipeCard'
 import { SearchField } from '../../components/SearchField'
 import { SegmentedControl } from '../../components/SegmentedControl'
 import { StepIndicator } from '../../components/StepIndicator'
+import { Stepper } from '../../components/Stepper'
 import { Switch } from '../../components/Switch'
 import { TextField } from '../../components/TextField'
 import { TopBar } from '../../components/TopBar'
@@ -52,6 +54,8 @@ export default function KitPage() {
   const [checked, setChecked] = useState<Record<string, boolean>>({ tomates: true })
   const [step, setStep] = useState(2)
   const [eaten, setEaten] = useState(1240)
+  const [people, setPeople] = useState(2)
+  const [duration, setDuration] = useState<'7' | '14'>('7')
 
   const toggle = <T,>(list: T[], item: T) =>
     list.includes(item) ? list.filter((x) => x !== item) : [...list, item]
@@ -140,6 +144,20 @@ export default function KitPage() {
               format={(v) => `${v.toLocaleString('fr-FR')} portion`}
             />
           </div>
+        </div>
+        <Row label="Stepper">
+          <Stepper label="Personnes" value={people} onChange={setPeople} max={8} />
+        </Row>
+        <div className="max-w-[520px]">
+          <ChoiceCards
+            legend="ChoiceCards"
+            choices={[
+              { value: '7', title: 'Une semaine', description: 'Idéal pour commencer', icon: 'calendar' },
+              { value: '14', title: 'Deux semaines', description: 'Moins de courses à prévoir', icon: 'calendar' },
+            ]}
+            value={duration}
+            onChange={setDuration}
+          />
         </div>
         <div className="max-w-[420px]">
           <Switch

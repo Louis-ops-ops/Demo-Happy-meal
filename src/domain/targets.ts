@@ -84,6 +84,46 @@ export type Targets = {
 
 export type TargetsResult = { ok: true; targets: Targets } | { ok: false; error: TargetsError }
 
+export type MaintenanceTargets = {
+  age: number
+  bmr: number
+  tdee: number
+  kcalTarget: number
+  macros: MacroTargets
+  currentBmi: number
+}
+
+export type MaintenanceResult = { ok: true; targets: MaintenanceTargets } | { ok: false; error: TargetsError }
+
+/**
+ * Targets without a weight goal (the user skipped it): eat at maintenance.
+ * Same input checks as computeTargets, minus the goal-related ones.
+ */
+export function computeMaintenance(
+  input: Omit<ProfileInput, 'targetWeightKg' | 'pace'>,
+  today: IsoDate,
+): MaintenanceResult {
+  // Reuse the full validation with a neutral goal just under the current weight.
+  const error = validate({ ...input, targetWeightKg: input.weightKg - 0.1, pace: 'gentle' }, today)
+  if (error && error.code !== 'target_bmi_too_low') return { ok: false, error }
+
+  const age = ageOn(input.birthDate, today)
+  const bmrKcal = computeBmr({ sex: input.sex, weightKg: input.weightKg, heightCm: input.heightCm, age })
+  const tdeeKcal = computeTdee(bmrKcal, input.activity)
+  const kcalTarget = Math.max(tdeeKcal, MIN_KCAL[input.sex])
+  return {
+    ok: true,
+    targets: {
+      age,
+      bmr: Math.round(bmrKcal),
+      tdee: Math.round(tdeeKcal),
+      kcalTarget: Math.round(kcalTarget),
+      macros: macroTargets({ kcal: kcalTarget, weightKg: input.weightKg, heightCm: input.heightCm }),
+      currentBmi: Math.round(bmi(input.weightKg, input.heightCm) * 10) / 10,
+    },
+  }
+}
+
 /** Daily deficit for a weekly loss: kg/week × 7700 / 7. */
 export function dailyDeficit(kgPerWeek: number): number {
   return (kgPerWeek * KCAL_PER_KG) / 7

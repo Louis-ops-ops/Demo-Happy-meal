@@ -1,5 +1,5 @@
 import type { IndexedFood } from './reference'
-import { normalize } from './text'
+import { normalize } from '../domain/text'
 
 /**
  * Searches foods for the "j'ai mangé autre chose" flow (< 10 s entry): every word of the query must match
