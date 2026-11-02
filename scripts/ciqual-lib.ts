@@ -1,5 +1,5 @@
 import type { Aisle, FoodTag } from '../src/data/schemas.ts'
-import { normalize } from '../src/data/text.ts'
+import { normalize } from '../src/domain/text.ts'
 
 /** Ciqual constituent codes used by the app. */
 export const CONSTITUENTS = {

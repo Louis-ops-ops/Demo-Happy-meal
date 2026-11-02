@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { normalize } from '../src/data/text'
+import { normalize } from '../src/domain/text'
 import { aisleFor, decodeXml, parseCiqualValue, tagsFor } from './ciqual-lib'
 
 describe('parseCiqualValue', () => {
