@@ -8,8 +8,8 @@ Appli de traque de calories, plan alimentaire personnalisé et suivi de poids. 1
 
 ```bash
 npm install
-npm run dev            # web : portfolio sur /, appli sur /app
-npm run dev:desktop    # cible desktop (HashRouter, sans portfolio ni démo)
+npm run dev            # web : appli sur /app, démo sur /app/demo
+npm run dev:desktop    # cible desktop (HashRouter, sans démo)
 npm run build          # build web -> dist/
 npm run build:desktop  # build desktop -> dist-desktop/
 npm run lint
