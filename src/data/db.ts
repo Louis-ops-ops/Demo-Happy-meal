@@ -21,6 +21,8 @@ export type Profile = {
   /** 2 to 5: lunch + dinner, then breakfast, then one or two snacks. */
   mealsPerDay: number
   planDays: 7 | 14
+  /** Set by the demo profile, so the demo can be reset. */
+  demo?: boolean
   createdAt: IsoDate
   updatedAt: IsoDate
 }

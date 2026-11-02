@@ -9,13 +9,14 @@ import { OnboardingRoutes } from '../features/onboarding/OnboardingRoutes'
 import { CoursesPage } from '../features/courses/CoursesPage'
 import { RecipePage } from '../features/recipe/RecipePage'
 import { SuiviPage } from '../features/suivi/SuiviPage'
+import { DemoPage } from '../features/demo/DemoPage'
+import { ProfilPage } from '../features/profil/ProfilPage'
 import { PlanPage } from '../features/plan/PlanPage'
 import { PlanSetupPage } from '../features/plan/PlanSetupPage'
 import { TodayPage } from '../features/today/TodayPage'
 import { toIsoDate } from '../domain/dates'
 import { dayNutrients } from '../domain/journal'
 import { appPath } from '../platform'
-import { PlaceholderPage } from './PlaceholderPage'
 
 const KitPage = lazy(() => import('../features/kit/KitPage'))
 
@@ -62,6 +63,7 @@ export function AppRoutes() {
   return (
     <Routes>
       <Route path="bienvenue/*" element={<OnboardingRoutes />} />
+      <Route path="demo" element={<DemoPage />} />
       <Route element={<AppLayout />}>
         <Route element={<RequireProfile />}>
           <Route index element={<TodayPage />} />
@@ -69,7 +71,7 @@ export function AppRoutes() {
           <Route path="plan/nouveau" element={<PlanSetupPage />} />
           <Route path="courses" element={<CoursesPage />} />
           <Route path="suivi" element={<SuiviPage />} />
-          <Route path="profil" element={<PlaceholderPage title="Profil" step={8} />} />
+          <Route path="profil" element={<ProfilPage />} />
         </Route>
         <Route path="_kit" element={<KitPage />} />
       </Route>

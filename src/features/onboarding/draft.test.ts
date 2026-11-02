@@ -78,3 +78,16 @@ describe('toProfile and saveOnboarding', () => {
     expect(() => toProfile(EMPTY_DRAFT, TODAY)).toThrow()
   })
 })
+
+describe('profileToDraft', () => {
+  it('gives back the same profile once the onboarding is finished', async () => {
+    const { profileToDraft } = await import('./draft')
+    const { profile, weightKg } = toProfile(
+      { ...EMPTY_DRAFT, sex: 'male', birthDate: '1990-01-01', heightCm: '180', weightKg: '85', activity: 'light', targetWeightKg: '78', diets: ['vegan'], exclusions: ['Ail'], householdSize: 2 },
+      '2026-11-02',
+    )
+    expect(toProfile(profileToDraft(profile, weightKg), '2026-11-02')).toEqual({ profile, weightKg })
+    const maintenance = { ...profile, goal: null }
+    expect(profileToDraft(maintenance, 85)).toMatchObject({ hasGoal: false, targetWeightKg: '', pace: 'moderate' })
+  })
+})

@@ -115,3 +115,22 @@ export function toProfile(draft: OnboardingDraft, today: IsoDate): { profile: Pr
     },
   }
 }
+
+/** Pre-fills the onboarding from the saved profile, to change an answer without retyping everything. */
+export function profileToDraft(profile: Profile, weightKg: number): OnboardingDraft {
+  return {
+    sex: profile.sex,
+    birthDate: profile.birthDate,
+    heightCm: String(profile.heightCm),
+    weightKg: String(weightKg),
+    activity: profile.activity,
+    hasGoal: profile.goal !== null,
+    targetWeightKg: profile.goal ? String(profile.goal.targetWeightKg) : '',
+    pace: profile.goal?.pace ?? 'moderate',
+    diets: profile.diets,
+    exclusions: profile.exclusions,
+    householdSize: profile.householdSize,
+    mealsPerDay: profile.mealsPerDay,
+    planDays: profile.planDays,
+  }
+}
