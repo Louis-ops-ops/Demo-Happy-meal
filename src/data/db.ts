@@ -58,6 +58,9 @@ export type JournalEntry = {
   planKey?: string
 }
 
+/** What the person ticked on the shopping list of a plan. The lines themselves are derived from the plan. */
+export type ShoppingStateRow = { planId: string; foodId: string; checked: boolean; atHome: boolean }
+
 export const planKey = (planId: string, day: number, index: number) => `${planId}:${day}:${index}`
 
 export type CurrentPlan = { plan: PlanRow; meals: PlanMealRow[] }
@@ -68,6 +71,7 @@ class HappyMealDb extends Dexie {
   plans!: EntityTable<PlanRow, 'id'>
   planMeals!: Table<PlanMealRow, [string, number, number]>
   journal!: EntityTable<JournalEntry, 'id'>
+  shoppingState!: Table<ShoppingStateRow, [string, string]>
 
   constructor() {
     super('happy-meal')
@@ -81,6 +85,9 @@ class HappyMealDb extends Dexie {
     })
     this.version(3).stores({
       journal: '++id, date, planKey',
+    })
+    this.version(4).stores({
+      shoppingState: '[planId+foodId], planId',
     })
   }
 }
@@ -114,12 +121,13 @@ export async function getCurrentPlan(): Promise<CurrentPlan | null> {
 
 async function deletePlans(ids: string[]): Promise<void> {
   await db.planMeals.where('planId').anyOf(ids).delete()
+  await db.shoppingState.where('planId').anyOf(ids).delete()
   await db.plans.bulkDelete(ids)
 }
 
 /** Saves a freshly generated plan as the draft, replacing any previous draft. */
 export async function saveDraftPlan(plan: PlanRow, meals: readonly PlannedMeal[]): Promise<void> {
-  await db.transaction('rw', db.plans, db.planMeals, async () => {
+  await db.transaction('rw', db.plans, db.planMeals, db.shoppingState, async () => {
     await deletePlans((await db.plans.where('status').equals('draft').primaryKeys()) as string[])
     await db.plans.put(plan)
     await db.planMeals.bulkPut(meals.map((meal) => ({ ...meal, planId: plan.id })))
@@ -133,7 +141,7 @@ export async function saveDayMeals(planId: string, day: number, meals: readonly 
 
 /** Validates a plan: it becomes the only active one. */
 export async function activatePlan(planId: string): Promise<void> {
-  await db.transaction('rw', db.plans, db.planMeals, async () => {
+  await db.transaction('rw', db.plans, db.planMeals, db.shoppingState, async () => {
     const others = (await db.plans.toCollection().primaryKeys()).filter((id) => id !== planId)
     await deletePlans(others as string[])
     await db.plans.update(planId, { status: 'active' })
@@ -161,4 +169,16 @@ export async function addJournalEntry(entry: JournalEntry): Promise<void> {
 
 export async function deleteJournalEntry(id: number): Promise<void> {
   await db.journal.delete(id)
+}
+
+/** Ticks a shopping line, or marks it as already at home. Only the given fields change. */
+export async function setShoppingState(
+  planId: string,
+  foodId: string,
+  patch: Partial<Pick<ShoppingStateRow, 'checked' | 'atHome'>>,
+): Promise<void> {
+  await db.transaction('rw', db.shoppingState, async () => {
+    const current = (await db.shoppingState.get([planId, foodId])) ?? { planId, foodId, checked: false, atHome: false }
+    await db.shoppingState.put({ ...current, ...patch })
+  })
 }

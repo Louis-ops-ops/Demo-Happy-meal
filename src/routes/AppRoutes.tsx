@@ -6,6 +6,7 @@ import { KcalSummary } from '../components/KcalSummary'
 import { db } from '../data/db'
 import { onboardingPath } from '../features/onboarding/paths'
 import { OnboardingRoutes } from '../features/onboarding/OnboardingRoutes'
+import { CoursesPage } from '../features/courses/CoursesPage'
 import { PlanPage } from '../features/plan/PlanPage'
 import { PlanSetupPage } from '../features/plan/PlanSetupPage'
 import { TodayPage } from '../features/today/TodayPage'
@@ -64,7 +65,7 @@ export function AppRoutes() {
           <Route index element={<TodayPage />} />
           <Route path="plan" element={<PlanPage />} />
           <Route path="plan/nouveau" element={<PlanSetupPage />} />
-          <Route path="courses" element={<PlaceholderPage title="Courses" step={7} />} />
+          <Route path="courses" element={<CoursesPage />} />
           <Route path="suivi" element={<PlaceholderPage title="Suivi" step={7} />} />
           <Route path="profil" element={<PlaceholderPage title="Profil" step={8} />} />
         </Route>
