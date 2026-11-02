@@ -182,3 +182,21 @@ export async function setShoppingState(
     await db.shoppingState.put({ ...current, ...patch })
   })
 }
+
+/** Records a weigh-in (one per day: the last one of a day wins). */
+export async function saveWeighIn(date: IsoDate, kg: number): Promise<void> {
+  await db.weighIns.put({ date, kg })
+}
+
+export async function deleteWeighIn(date: IsoDate): Promise<void> {
+  await db.weighIns.delete(date)
+}
+
+/** Stores recalculated targets on the profile. */
+export async function updateProfileTargets(
+  kcalTarget: number,
+  macros: MacroTargets,
+  updatedAt: IsoDate,
+): Promise<void> {
+  await db.profile.update('me', { kcalTarget, macros, updatedAt })
+}

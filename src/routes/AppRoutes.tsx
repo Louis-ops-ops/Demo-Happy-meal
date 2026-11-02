@@ -8,6 +8,7 @@ import { onboardingPath } from '../features/onboarding/paths'
 import { OnboardingRoutes } from '../features/onboarding/OnboardingRoutes'
 import { CoursesPage } from '../features/courses/CoursesPage'
 import { RecipePage } from '../features/recipe/RecipePage'
+import { SuiviPage } from '../features/suivi/SuiviPage'
 import { PlanPage } from '../features/plan/PlanPage'
 import { PlanSetupPage } from '../features/plan/PlanSetupPage'
 import { TodayPage } from '../features/today/TodayPage'
@@ -67,7 +68,7 @@ export function AppRoutes() {
           <Route path="plan" element={<PlanPage />} />
           <Route path="plan/nouveau" element={<PlanSetupPage />} />
           <Route path="courses" element={<CoursesPage />} />
-          <Route path="suivi" element={<PlaceholderPage title="Suivi" step={7} />} />
+          <Route path="suivi" element={<SuiviPage />} />
           <Route path="profil" element={<PlaceholderPage title="Profil" step={8} />} />
         </Route>
         <Route path="_kit" element={<KitPage />} />
